@@ -10,10 +10,8 @@ remote_theme: "mmistakes/minimal-mistakes@4.28.0"
 plugins:
   - jekyll-include-cache
 
-# Skin base (luego lo convertimos a morado)
 minimal_mistakes_skin: "default"
 
-# Cargar CSS personalizado
 sass:
   sass_dir: _sass
   style: compressed
@@ -27,7 +25,6 @@ defaults:
     values:
       css: "/assets/css/custom.css"
 
-# Navegación principal
 nav:
   - title: "Acerca"
     url: /about/
