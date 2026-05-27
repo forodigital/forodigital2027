@@ -1,12 +1,5 @@
 title: "Foro Digital 2027"
 description: "Innovación, tecnología y colaboración"
-baseurl: "/forodigital2027"
-url: "https://forodigital.github.io"
-
-theme: jekyll-theme-serif
-
-markdown: kramdown
-highlighter: rouge
-
-sass:
-  style: compressed
+remote_theme: "jekyll-conference/jekyll-conference-theme"
+plugins:
+  - jekyll-remote-theme
