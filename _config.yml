@@ -12,6 +12,11 @@ plugins:
 
 # Skin base (luego lo convertimos a morado)
 minimal_mistakes_skin: "default"
+defaults:
+  - scope:
+      path: ""
+    values:
+      css: "/assets/css/custom.css"
 
 # Navegación principal
 nav:
