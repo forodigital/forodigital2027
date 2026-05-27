@@ -10,13 +10,28 @@ body {
   color: #333333;
 }
 
-/* --- NAVBAR --- */
-/* HEADER BLANCO */
+/* =========================
+   HEADER
+   ========================= */
+
 .navbar {
   background-color: #FFFFFF;
   color: #333333;
   padding: 12px 0;
   border-bottom: 1px solid #EEEEEE;
+}
+
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 20px;
+}
+
+.nav-logo {
+  height: 40px;
 }
 
 .navbar nav a {
@@ -28,7 +43,7 @@ body {
 }
 
 .navbar nav a:hover {
-  color: #E91E63; /* Rosa del logo */
+  color: #E91E63;
 }
 
 .nav-button {
@@ -45,14 +60,17 @@ body {
   background-color: #C2185B;
 }
 
-/* --- HERO --- */
-/* HERO CON ANIMACIÓN DE DEGRADADO */
+/* =========================
+   HERO
+   ========================= */
+
 .hero {
   position: relative;
   padding: 140px 20px;
   color: white;
   text-align: left;
 
+  /* Degradado rosa 100% → 0% + imagen */
   background:
     linear-gradient(to right, rgba(233, 30, 99, 1) 0%, rgba(233, 30, 99, 0) 50%),
     url("/forodigital2027/assets/images/hero-bg.jpg");
@@ -61,10 +79,10 @@ body {
   background-position: center;
   background-repeat: no-repeat;
 
+  /* Animación suave */
   animation: heroGradient 6s ease-in-out infinite alternate;
 }
 
-/* ANIMACIÓN DEL DEGRADADO */
 @keyframes heroGradient {
   0% {
     background:
@@ -78,49 +96,30 @@ body {
   }
 }
 
-/* CONTENIDO DEL HERO */
 .hero-content {
   max-width: 600px;
   margin-left: 40px;
 }
-/* HERO RESPONSIVE */
-@media (max-width: 768px) {
-  .hero {
-    padding: 100px 20px;
 
-    background:
-      linear-gradient(to bottom, rgba(233, 30, 99, 1) 0%, rgba(233, 30, 99, 0.2) 70%),
-      url("/forodigital2027/assets/images/hero-bg.jpg");
-
-    background-size: cover;
-    background-position: center;
-  }
-
-  .hero-content {
-    margin-left: 0;
-    max-width: 100%;
-    text-align: center;
-  }
-
-  .hero-logo {
-    height: 70px;
-  }
+.hero-logo {
+  height: 90px;
+  margin-bottom: 20px;
 }
 
+/* =========================
+   SECCIONES
+   ========================= */
 
-.subtitle {
-  font-size: 1.2rem;
-  opacity: 0.9;
-}
-
-/* --- SECCIONES --- */
 .section {
   max-width: 1200px;
   margin: auto;
   padding: 60px 20px;
 }
 
-/* --- ABOUT --- */
+/* =========================
+   ABOUT
+   ========================= */
+
 .about-section {
   display: flex;
   align-items: center;
@@ -145,8 +144,10 @@ body {
   box-shadow: 0 4px 20px rgba(0,0,0,0.1);
 }
 
+/* =========================
+   WHY ATTEND
+   ========================= */
 
-/* --- WHY ATTEND --- */
 .why-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -171,7 +172,10 @@ body {
   margin-bottom: 10px;
 }
 
-/* --- SPEAKERS & SPONSORS --- */
+/* =========================
+   SPEAKERS & SPONSORS
+   ========================= */
+
 #speakers .grid,
 #sponsors .grid {
   display: grid;
@@ -229,7 +233,10 @@ body {
   transform: translateY(-3px);
 }
 
-/* --- RESPONSIVE --- */
+/* =========================
+   RESPONSIVE
+   ========================= */
+
 @media (max-width: 900px) {
   .about-section {
     flex-direction: column;
@@ -242,5 +249,29 @@ body {
 
   .why-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* HERO RESPONSIVE */
+@media (max-width: 768px) {
+  .hero {
+    padding: 100px 20px;
+
+    background:
+      linear-gradient(to bottom, rgba(233, 30, 99, 1) 0%, rgba(233, 30, 99, 0.2) 70%),
+      url("/forodigital2027/assets/images/hero-bg.jpg");
+
+    background-size: cover;
+    background-position: center;
+  }
+
+  .hero-content {
+    margin-left: 0;
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .hero-logo {
+    height: 70px;
   }
 }
