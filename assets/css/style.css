@@ -9,20 +9,60 @@ body {
   margin: 0;
 }
 
-/* HERO */
+/* HERO con imagen + degradado */
 .hero {
-  background: linear-gradient(135deg, var(--primary), var(--primary-light));
-  padding: 120px 20px;
+  position: relative;
+  height: 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
+
+  /* Imagen de fondo */
+  background-image: url('/forodigital2027/assets/images/hero-bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
   color: white;
-  border-bottom-left-radius: 40px;
-  border-bottom-right-radius: 40px;
-  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  padding: 40px 20px;
 }
 
-.hero img {
-  max-width: 260px;
+/* Capa morada degradada */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(106, 13, 173, 0.85) 0%,
+    rgba(106, 13, 173, 0.65) 40%,
+    rgba(106, 13, 173, 0.35) 70%,
+    rgba(106, 13, 173, 0.00) 100%
+  );
+  z-index: 1;
+}
+
+/* Logo */
+.hero-logo {
+  max-width: 220px;
   margin-bottom: 20px;
+  z-index: 2;
+}
+
+/* Título */
+.hero h1 {
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin: 0;
+  z-index: 2;
+}
+
+/* Subtítulo */
+.hero .subtitle {
+  font-size: 1.3rem;
+  margin-top: 10px;
+  z-index: 2;
 }
 
 /* SECCIONES */
