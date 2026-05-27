@@ -188,9 +188,16 @@ nav a {
     max-width: 300px;
   }
 
+/* SPEAKERS PLACEHOLDERS */
 .placeholder-card {
   padding: 40px 20px;
-  opacity: 0.7;
+  opacity: 0.8;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.placeholder-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.15);
 }
 
 .placeholder-icon {
@@ -217,19 +224,4 @@ nav a {
   text-decoration: none;
   font-weight: bold;
   display: inline-block;
-}
-
-.register-fixed {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background: #6a0dad;
-  color: white;
-  padding: 14px 20px;
-  border-radius: 50px;
-  font-weight: bold;
-  z-index: 999;
-}
-
-  
 }
