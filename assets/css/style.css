@@ -9,7 +9,7 @@ body {
   margin: 0;
 }
 
-/* HERO con imagen + degradado */
+/* HERO con imagen + degradado visible */
 .hero {
   position: relative;
   height: 420px;
@@ -18,29 +18,23 @@ body {
   justify-content: center;
   align-items: center;
   text-align: center;
+  color: white;
+  padding: 40px 20px;
 
   /* Imagen de fondo */
-  background-image: url('/forodigital2027/assets/images/hero-bg.jgp');
+  background-image:
+    linear-gradient(
+      to bottom,
+      rgba(106, 13, 173, 0.85) 0%,
+      rgba(106, 13, 173, 0.65) 40%,
+      rgba(106, 13, 173, 0.35) 70%,
+      rgba(106, 13, 173, 0.00) 100%
+    ),
+    url('https://forodigital.github.io/forodigital2027/assets/images/hero-bg.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-
-  color: white;
-  padding: 40px 20px;
-}
-
-/* Capa morada degradada */
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(106, 13, 173, 0.85) 0%,
-    rgba(106, 13, 173, 0.65) 40%,
-    rgba(106, 13, 173, 0.35) 70%,
-    rgba(106, 13, 173, 0.00) 100%
-  );
-  z-index: 1;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
 }
 
 /* Logo */
@@ -64,6 +58,7 @@ body {
   margin-top: 10px;
   z-index: 2;
 }
+
 
 /* SECCIONES */
 .section {
