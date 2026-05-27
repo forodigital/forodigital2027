@@ -5,6 +5,7 @@ permalink: /
 header:
   overlay_color: "#6a0dad"
   overlay_filter: "0.2"
+    logo: /forodigital2027/assets/images/logo.png
 excerpt: "Innovación, tecnología y colaboración en un solo lugar"
 ---
 
