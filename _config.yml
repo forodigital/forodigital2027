@@ -12,6 +12,15 @@ plugins:
 
 # Skin base (luego lo convertimos a morado)
 minimal_mistakes_skin: "default"
+
+# Cargar CSS personalizado
+sass:
+  sass_dir: _sass
+  style: compressed
+
+include:
+  - assets/css
+
 defaults:
   - scope:
       path: ""
@@ -30,9 +39,3 @@ nav:
     url: /sponsors/
   - title: "Contacto"
     url: /contact/
-sass:
-  sass_dir: _sass
-  style: compressed
-
-include:
-  - assets/css
