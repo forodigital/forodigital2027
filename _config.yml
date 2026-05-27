@@ -1,5 +1,2 @@
 title: "Foro Digital 2027"
 description: "Innovación, tecnología y colaboración"
-remote_theme: "jekyll-conference/jekyll-conference-theme"
-plugins:
-  - jekyll-remote-theme
