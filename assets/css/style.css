@@ -219,6 +219,17 @@ nav a {
   display: inline-block;
 }
 
+.register-fixed {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #6a0dad;
+  color: white;
+  padding: 14px 20px;
+  border-radius: 50px;
+  font-weight: bold;
+  z-index: 999;
+}
 
   
 }
