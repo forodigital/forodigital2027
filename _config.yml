@@ -1,0 +1,27 @@
+title: "Foro Digital 2027"
+description: "Innovación, tecnología y colaboración"
+url: "https://forodigital.github.io"
+baseurl: "/forodigital2027"   # muy importante para tu repo actual
+
+locale: "es-ES"
+
+remote_theme: "mmistakes/minimal-mistakes@4.28.0"
+
+plugins:
+  - jekyll-include-cache
+
+# Skin (luego podemos hacer uno morado)
+minimal_mistakes_skin: "default"
+
+# Navegación principal
+nav:
+  - title: "Acerca"
+    url: /about/
+  - title: "Sesiones"
+    url: /sessions/
+  - title: "Speakers"
+    url: /speakers/
+  - title: "Sponsors"
+    url: /sponsors/
+  - title: "Contacto"
+    url: /contact/
