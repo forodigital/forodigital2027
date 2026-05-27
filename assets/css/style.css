@@ -9,39 +9,44 @@ body {
   margin: 0;
 }
 
-/* HERO con imagen + degradado visible */
+/* HERO con imagen + degradado horizontal */
 .hero {
   position: relative;
   height: 420px;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  text-align: center;
-  color: white;
-  padding: 40px 20px;
 
-  /* Imagen de fondo */
+  /* Imagen + degradado horizontal */
   background-image:
     linear-gradient(
-      to bottom,
+      to right,
       rgba(106, 13, 173, 0.85) 0%,
-      rgba(106, 13, 173, 0.65) 40%,
-      rgba(106, 13, 173, 0.35) 70%,
+      rgba(106, 13, 173, 0.65) 35%,
+      rgba(106, 13, 173, 0.35) 60%,
       rgba(106, 13, 173, 0.00) 100%
     ),
     url('https://forodigital.github.io/forodigital2027/assets/images/hero-bg.jpg');
+
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+
+  color: white;
+  padding: 40px 20px;
+}
+
+/* Contenedor del contenido alineado a la izquierda */
+.hero-content {
+  max-width: 600px;
+  margin-left: 40px;
+  z-index: 2;
+  text-align: left;
 }
 
 /* Logo */
 .hero-logo {
-  max-width: 220px;
+  max-width: 180px;
   margin-bottom: 20px;
-  z-index: 2;
 }
 
 /* Título */
@@ -49,14 +54,12 @@ body {
   font-size: 2.8rem;
   font-weight: 800;
   margin: 0;
-  z-index: 2;
 }
 
 /* Subtítulo */
 .hero .subtitle {
   font-size: 1.3rem;
   margin-top: 10px;
-  z-index: 2;
 }
 
 
