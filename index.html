@@ -211,6 +211,50 @@
 </footer>
 
   
+<script>
+  const slides = document.querySelector('.slides');
+  const images = document.querySelectorAll('.slides img');
+  const dotsContainer = document.querySelector('.slider-dots');
+
+  let index = 0;
+
+  // Crear dots
+  images.forEach((_, i) => {
+    const dot = document.createElement('span');
+    if (i === 0) dot.classList.add('active');
+    dot.addEventListener('click', () => goToSlide(i));
+    dotsContainer.appendChild(dot);
+  });
+
+  const dots = document.querySelectorAll('.slider-dots span');
+
+  function updateSlider() {
+    slides.style.transform = `translateX(${-index * 100}%)`;
+    dots.forEach(dot => dot.classList.remove('active'));
+    dots[index].classList.add('active');
+  }
+
+  function nextSlide() {
+    index = (index + 1) % images.length;
+    updateSlider();
+  }
+
+  function prevSlide() {
+    index = (index - 1 + images.length) % images.length;
+    updateSlider();
+  }
+
+  document.querySelector('.next').addEventListener('click', nextSlide);
+  document.querySelector('.prev').addEventListener('click', prevSlide);
+
+  function goToSlide(i) {
+    index = i;
+    updateSlider();
+  }
+
+  // Auto-play
+  setInterval(nextSlide, 4000);
+</script>
 
 </body>
 </html>
