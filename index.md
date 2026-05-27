@@ -5,7 +5,6 @@ permalink: /
 header:
   overlay_color: "#6a0dad"
   overlay_filter: "0.2"
-  overlay_image: "https://images.unsplash.com/photo-1522199710521-72d69614c702"
 excerpt: "Innovación, tecnología y colaboración en un solo lugar"
 ---
 
