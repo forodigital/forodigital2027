@@ -57,18 +57,32 @@ body {
 }
 
 /* --- HERO --- */
-.hero {
-  background: linear-gradient(135deg, #E91E63 0%, #2196F3 100%);
+hero {
+  position: relative;
+  padding: 140px 20px;
   color: white;
-  text-align: center;
-  padding: 100px 20px;
+  text-align: left;
+
+  /* Fondo: imagen + overlay + degradado rosa → transparente */
+  background:
+    linear-gradient(to left, rgba(233, 30, 99, 0.85), rgba(233, 30, 99, 0.15)),
+    url("/forodigital2027/assets/images/hero-bg.jpg");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Contenido alineado a la izquierda */
+.hero-content {
+  max-width: 600px;
+  margin-left: 40px;
 }
 
 .hero-logo {
-  height: 80px;
+  height: 90px;
   margin-bottom: 20px;
 }
-
 .subtitle {
   font-size: 1.2rem;
   opacity: 0.9;
