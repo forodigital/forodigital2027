@@ -117,3 +117,72 @@ section.page__content {
   padding: 40px 0;
   border-bottom: 1px solid #eee;
 }
+
+/* ========================= */
+/* HERO ESTILO PROFESIONAL   */
+/* ========================= */
+
+/* Contenedor del hero */
+.page__hero--overlay {
+  padding: 120px 20px;
+  text-align: center;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+  position: relative;
+}
+
+/* Degradado morado elegante */
+.page__hero--overlay::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #6a0dad 0%, #9b4de3 100%);
+  opacity: 0.92;
+  z-index: 0;
+}
+
+/* Asegura que el contenido esté encima del degradado */
+.page__hero--overlay .wrapper {
+  position: relative;
+  z-index: 2;
+}
+
+/* Título del hero */
+.page__hero--overlay h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #ffffff;
+  margin-bottom: 10px;
+}
+
+/* Subtítulo */
+.page__hero--overlay .page__lead {
+  font-size: 1.3rem;
+  color: #f5e9ff;
+  margin-bottom: 25px;
+}
+
+/* Logo del hero */
+.page__hero--overlay img {
+  max-width: 260px;
+  margin-bottom: 20px;
+  filter: drop-shadow(0 4px 8px rgba(0,0,0,0.25));
+}
+
+/* Botón del hero */
+.page__hero--overlay .btn--primary {
+  background-color: #ffffff !important;
+  color: #6a0dad !important;
+  border: none !important;
+  font-weight: 700;
+  padding: 12px 28px;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.page__hero--overlay .btn--primary:hover {
+  background-color: #f3e6ff !important;
+  transform: translateY(-3px);
+}
+
