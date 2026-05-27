@@ -25,3 +25,9 @@ nav:
     url: /sponsors/
   - title: "Contacto"
     url: /contact/
+sass:
+  sass_dir: _sass
+  style: compressed
+
+include:
+  - assets/css
