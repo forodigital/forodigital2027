@@ -9,10 +9,7 @@
   <meta property="og:description" content="Décima edición del evento que nació como Get-CsLatam. Ahora Foro Digital: abierto a todas las soluciones." />
   <meta property="og:image" content="/forodigital2027/assets/images/hero-bg.jpg" />
 
-  <!-- Estilos -->
   <link rel="stylesheet" href="/forodigital2027/assets/css/style.css" />
-
-  <!-- AOS (animaciones al hacer scroll) -->
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 </head>
 <body>
@@ -39,13 +36,12 @@
     </div>
   </header>
 
-  <!-- HERO (restaurado con efecto animado que te gustaba) -->
-  <!-- Si prefieres la foto de fondo activa, cambia class="hero hero--fx" por class="hero hero--fx hero--image" -->
+  <!-- HERO (efecto animado restaurado) -->
+  <!-- Para activar la imagen de fondo añade la clase hero--image al section -->
   <section id="home" class="hero hero--fx" aria-label="Hero principal">
-    <!-- animated gradient + subtle shapes (restored) -->
     <div class="hero-bg-layer" aria-hidden="true"></div>
+
     <div class="hero-shapes" aria-hidden="true">
-      <!-- decorative SVG shapes -->
       <svg class="shape s1" viewBox="0 0 800 200" preserveAspectRatio="none" aria-hidden="true">
         <defs><linearGradient id="hg1" x1="0" x2="1"><stop offset="0" stop-color="#ff4ecb"/><stop offset="1" stop-color="#4ea8ff"/></linearGradient></defs>
         <path d="M0,80 C160,200 640,0 800,80 L800 200 L0 200 Z" fill="url(#hg1)" opacity="0.08"></path>
@@ -56,14 +52,12 @@
     </div>
 
     <div class="hero-inner" data-aos="fade-up">
-      <!-- Logo grande dentro del hero para protagonismo -->
       <div class="hero-logo-wrap" aria-hidden="false">
         <img src="/forodigital2027/assets/images/logo.png" alt="Foro Digital" class="hero-logo" />
       </div>
 
       <p class="hero-pretitle">Décima edición</p>
 
-      <!-- Título: solo "2027" en destaque -->
       <h1 class="hero-title">
         <span class="title-gradient">2027</span>
       </h1>
@@ -90,42 +84,76 @@
 
   <main>
 
-    <!-- ABOUT (restauré y alineé el contenido que tenías en el index del repo) -->
-    <section id="acerca" class="section" data-aos="fade-up">
+    <!-- ABOUT: sustituido por tu bloque exacto y adaptado -->
+    <section id="about" class="section about-section" data-aos="fade-up">
+      <div class="container about-wrap">
+        <div class="about-content">
+          <h2>Acerca del evento</h2>
+
+          <p>
+            Foro Digital celebra su <strong>10ª edición</strong> consolidándose como el punto de encuentro más importante en Latinoamérica para profesionales de <strong>Colaboración</strong>, <strong>Comunicaciones Unificadas</strong> y <strong>Productividad impulsada por IA</strong>.
+          </p>
+
+          <p>
+            Lo que inició como <em>Get-CsLatam Conference</em> —un espacio dedicado al ecosistema Microsoft— ha evolucionado hacia un evento más amplio, diverso y alineado con las necesidades actuales del mundo digital. Hoy, Foro Digital reúne a líderes, expertos, fabricantes, partners y entusiastas que buscan transformar la forma en que las organizaciones trabajan, se comunican y colaboran.
+          </p>
+
+          <p>
+            Durante esta edición exploraremos cómo la inteligencia artificial está redefiniendo la productividad, cómo las plataformas de colaboración están evolucionando y cómo las comunicaciones unificadas se integran en un entorno cada vez más híbrido, distribuido y automatizado.
+          </p>
+
+          <p>
+            Foro Digital 2027 es más que un evento: es una comunidad, un espacio de aprendizaje y una oportunidad para conectar con quienes están construyendo el futuro del trabajo digital.
+          </p>
+        </div>
+
+        <div class="about-image">
+          <img src="/forodigital2027/assets/images/about.jpg" alt="Foro Digital 2027" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY / Por qué participar (tu bloque adaptado) -->
+    <section id="why" class="section" data-aos="fade-up">
       <div class="container">
-        <h2>Qué ofrecemos como Foro Digital</h2>
+        <h2>¿Por qué participar?</h2>
 
-        <div class="about-grid">
-          <div class="about-text">
-            <!-- Texto adaptado desde tu index anterior, orientado a valor y alineado -->
-            <p class="lead">
-              Foro Digital reúne a profesionales y organizaciones que lideran la transformación digital. Nuestro objetivo es ofrecer contenido práctico y aplicable: sesiones con casos reales, talleres con herramientas y espacios de networking que generan oportunidades concretas.
-            </p>
-
-            <p>
-              Durante diez años fuimos un punto de encuentro clave para la comunidad; hoy ampliamos ese propósito para incluir a todos los proveedores y fabricantes que aportan soluciones de colaboración, comunicaciones y productividad impulsadas por IA.
-            </p>
-
-            <h3 id="por-que">Por qué asistir</h3>
-            <ul class="benefits">
-              <li><strong>Aprendizaje directo de líderes:</strong> sesiones impartidas por especialistas con casos prácticos y frameworks aplicables.</li>
-              <li><strong>Networking de alto valor:</strong> conecta con profesionales, partners y fabricantes para generar alianzas estratégicas.</li>
-              <li><strong>Innovación aplicada:</strong> demos y soluciones que puedes evaluar e implementar.</li>
-              <li><strong>Desarrollo profesional:</strong> talleres y paneles para mejorar habilidades y acelerar proyectos.</li>
-            </ul>
-
-            <p class="lead-cta">
-              Participar te posiciona en la vanguardia tecnológica y te conecta con la comunidad que impulsa la transformación digital en Latinoamérica.
-            </p>
+        <div class="grid why-grid">
+          <div class="card why-card">
+            <div class="why-icon">🎤</div>
+            <h3>Contenido de alto impacto</h3>
+            <p>Aprende directamente de especialistas, arquitectos, MVPs, fabricantes y líderes que están definiendo el rumbo de la colaboración, la IA aplicada y las comunicaciones unificadas.</p>
           </div>
 
-          <aside class="about-cta" aria-hidden="false">
-            <div class="card highlight">
-              <h4>¿Listo para participar?</h4>
-              <p>Asegura tu lugar y recibe actualizaciones sobre speakers, agenda y sesiones prácticas.</p>
-              <a class="btn btn-primary" href="https://TU-PORTAL-DE-REGISTRO.com" target="_blank" rel="noopener">Ir al registro</a>
-            </div>
-          </aside>
+          <div class="card why-card">
+            <div class="why-icon">🤖</div>
+            <h3>Productividad impulsada por IA</h3>
+            <p>Descubre cómo la inteligencia artificial está transformando procesos, automatizando tareas y potenciando la eficiencia en organizaciones de todos los tamaños.</p>
+          </div>
+
+          <div class="card why-card">
+            <div class="why-icon">💡</div>
+            <h3>Tendencias reales, no teoría</h3>
+            <p>Casos de uso, demostraciones y sesiones prácticas que muestran cómo las empresas están adoptando tecnologías modernas para mejorar su operación.</p>
+          </div>
+
+          <div class="card why-card">
+            <div class="why-icon">🤝</div>
+            <h3>Networking con la comunidad</h3>
+            <p>Conecta con profesionales de toda la región: IT Pros, líderes de negocio, consultores, partners, fabricantes y entusiastas del mundo digital.</p>
+          </div>
+
+          <div class="card why-card">
+            <div class="why-icon">🌐</div>
+            <h3>Ecosistema más amplio que nunca</h3>
+            <p>Ya no es solo Microsoft: ahora abarcamos plataformas, herramientas y tecnologías que impulsan la colaboración moderna y la productividad empresarial.</p>
+          </div>
+
+          <div class="card why-card">
+            <div class="why-icon">🎉</div>
+            <h3>10 años construyendo comunidad</h3>
+            <p>Una década de aprendizaje, innovación y crecimiento continuo, ahora con una visión renovada y más inclusiva.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -144,7 +172,7 @@
       </div>
     </section>
 
-    <!-- KEYNOTE (moved up and made more impactful) -->
+    <!-- KEYNOTE (impacto, arriba de speakers) -->
     <section id="keynote" class="section" data-aos="fade-up">
       <div class="container">
         <h2>Keynote Speaker</h2>
@@ -162,16 +190,18 @@
       </div>
     </section>
 
-    <!-- SPEAKERS (ACTIVO: POR DEFINIR + CTA) -->
+    <!-- SPEAKERS (por definir + CTA estilizado) -->
     <section id="speakers" class="section" data-aos="fade-up">
       <div class="container">
         <h2>Speakers</h2>
 
-        <!-- Estado activo -->
-        <div class="card" style="text-align:center;padding:28px;">
+        <div class="card status-card" style="text-align:center;padding:28px;">
           <h3>Speakers por definir</h3>
-          <p class="lead">Estamos abriendo el Call for Speakers. Si quieres compartir una sesión práctica y aplicada, postula tu propuesta.</p>
-          <a class="btn btn-primary" href="https://TU-FORMULARIO-CALL-FOR-SPEAKERS.com" target="_blank" rel="noopener">Postula tu sesión</a>
+          <p class="lead">Abrimos el Call for Speakers. Buscamos sesiones prácticas, casos reales y talleres aplicables.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="https://TU-FORMULARIO-CALL-FOR-SPEAKERS.com" target="_blank" rel="noopener">Postula tu sesión</a>
+            <a class="btn btn-outline" href="#por-que">Ver requisitos</a>
+          </div>
         </div>
 
         <!-- Plantilla comentada: 9 slots para cuando quieras activar -->
@@ -192,7 +222,7 @@
       </div>
     </section>
 
-    <!-- AGENDA -->
+    <!-- AGENDA (mantengo el estilo anterior que te gustaba) -->
     <section id="agenda" class="section" data-aos="fade-up">
       <div class="container">
         <h2>Agenda (resumen)</h2>
@@ -204,16 +234,18 @@
       </div>
     </section>
 
-    <!-- SPONSORS (ACTIVO: POR DEFINIR + CTA) -->
+    <!-- SPONSORS (por definir + CTA estilizado) -->
     <section id="sponsors" class="section" data-aos="fade-up">
       <div class="container">
         <h2>Sponsors y aliados</h2>
 
-        <!-- Estado activo -->
-        <div class="card" style="text-align:center;padding:28px;">
+        <div class="card status-card" style="text-align:center;padding:28px;">
           <h3>Sponsors por definir</h3>
           <p class="lead">Abrimos el Call for Sponsors. Si tu organización quiere apoyar la comunidad y mostrar soluciones, contáctanos.</p>
-          <a class="btn btn-primary" href="mailto:patrocinios@forodigital.com" target="_blank" rel="noopener">Call for Sponsors</a>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="mailto:patrocinios@forodigital.com" rel="noopener">Call for Sponsors</a>
+            <a class="btn btn-outline" href="#por-que">Paquetes y beneficios</a>
+          </div>
         </div>
 
         <!-- Plantilla comentada: 10 slots para sponsors -->
@@ -292,7 +324,6 @@
     </div>
   </footer>
 
-  <!-- Scripts -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
     AOS.init({ duration: 800, once: true });
