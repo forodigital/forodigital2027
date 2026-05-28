@@ -5,10 +5,6 @@
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Foro Digital 2027 — 10ª edición</title>
   <meta name="description" content="Foro Digital 2027 — Décima edición. Evolucionamos desde Get-CsLatam: ahora un foro abierto a todas las soluciones de colaboración, comunicaciones y productividad impulsadas por IA." />
-  <meta property="og:title" content="Foro Digital 2027 — 10ª edición" />
-  <meta property="og:description" content="Décima edición del evento que nació como Get-CsLatam. Ahora Foro Digital: abierto a todas las soluciones." />
-  <meta property="og:image" content="/forodigital2027/assets/images/hero-bg.jpg" />
-
   <link rel="stylesheet" href="/forodigital2027/assets/css/style.css" />
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 </head>
@@ -17,27 +13,24 @@
   <!-- HEADER (NEGRO, SIN LOGO) -->
   <header class="site-header site-header--dark">
     <div class="header-inner">
-      <nav class="top-nav" role="navigation" aria-label="Menú principal">
-        <button id="nav-toggle" class="nav-toggle" aria-controls="nav-menu" aria-expanded="false" aria-label="Abrir menú">
-          <span class="hamburger" aria-hidden="true"></span>
-        </button>
+      <button id="nav-toggle" class="nav-toggle" aria-controls="nav-menu" aria-expanded="false" aria-label="Abrir menú">
+        <span class="hamburger" aria-hidden="true"></span>
+      </button>
 
-        <div id="nav-menu" class="nav-menu" role="menubar" aria-label="Navegación">
-          <a role="menuitem" href="#acerca">Acerca</a>
-          <a role="menuitem" href="#por-que">Por qué asistir</a>
-          <a role="menuitem" href="#stats">Datos</a>
-          <a role="menuitem" href="#keynote">Keynote</a>
-          <a role="menuitem" href="#speakers">Speakers</a>
-          <a role="menuitem" href="#agenda">Agenda</a>
-          <a role="menuitem" href="#galeria">Galería</a>
-          <a role="menuitem" href="#registro" class="nav-cta">Registro</a>
-        </div>
+      <nav id="nav-menu" class="nav-menu" role="navigation" aria-label="Menú principal">
+        <a href="#about">Acerca</a>
+        <a href="#why">Por qué asistir</a>
+        <a href="#stats">Datos</a>
+        <a href="#keynote">Keynote</a>
+        <a href="#speakers">Speakers</a>
+        <a href="#agenda">Agenda</a>
+        <a href="#galeria">Galería</a>
+        <a href="#registro" class="nav-cta">Registro</a>
       </nav>
     </div>
   </header>
 
-  <!-- HERO (efecto animado restaurado) -->
-  <!-- Para activar la imagen de fondo añade la clase hero--image al section -->
+  <!-- HERO (animado) -->
   <section id="home" class="hero hero--fx" aria-label="Hero principal">
     <div class="hero-bg-layer" aria-hidden="true"></div>
 
@@ -75,7 +68,7 @@
 
       <div class="hero-ctas">
         <a class="btn btn-primary" href="https://TU-PORTAL-DE-REGISTRO.com" target="_blank" rel="noopener">Ir al registro</a>
-        <a class="btn btn-outline" href="#acerca">Conoce más</a>
+        <a class="btn btn-outline" href="#about">Conoce más</a>
       </div>
 
       <p class="hero-note">Contenido práctico, networking de alto valor y casos reales. Únete a la comunidad que impulsa la transformación digital en Latinoamérica.</p>
@@ -84,7 +77,7 @@
 
   <main>
 
-    <!-- ABOUT: sustituido por tu bloque exacto y adaptado -->
+    <!-- ABOUT (tu bloque exacto adaptado) -->
     <section id="about" class="section about-section" data-aos="fade-up">
       <div class="container about-wrap">
         <div class="about-content">
@@ -113,7 +106,7 @@
       </div>
     </section>
 
-    <!-- WHY / Por qué participar (tu bloque adaptado) -->
+    <!-- WHY -->
     <section id="why" class="section" data-aos="fade-up">
       <div class="container">
         <h2>¿Por qué participar?</h2>
@@ -158,39 +151,46 @@
       </div>
     </section>
 
-    <!-- STATS -->
+    <!-- DATOS CLAVE (más foco e impacto) -->
     <section id="stats" class="section section-stats" data-aos="fade-up">
       <div class="container">
-        <h2>Datos clave</h2>
-        <div class="stats-grid">
-          <div class="stat-card"><div class="stat-number">2</div><div class="stat-label">Días</div></div>
-          <div class="stat-card"><div class="stat-number">25+</div><div class="stat-label">Speakers</div></div>
-          <div class="stat-card"><div class="stat-number">40+</div><div class="stat-label">Sesiones</div></div>
-          <div class="stat-card"><div class="stat-number">10+</div><div class="stat-label">Sponsors</div></div>
-          <div class="stat-card"><div class="stat-number">Gratis</div><div class="stat-label">Costo</div></div>
+        <div class="stats-hero">
+          <h2>Datos clave</h2>
+          <p class="stats-sub">Resumen rápido del evento</p>
+
+          <div class="stats-grid">
+            <div class="stat-card"><div class="stat-number">2</div><div class="stat-label">Días</div></div>
+            <div class="stat-card"><div class="stat-number">25+</div><div class="stat-label">Speakers</div></div>
+            <div class="stat-card"><div class="stat-number">40+</div><div class="stat-label">Sesiones</div></div>
+            <div class="stat-card"><div class="stat-number">10+</div><div class="stat-label">Sponsors</div></div>
+            <div class="stat-card"><div class="stat-number">Gratis</div><div class="stat-label">Costo</div></div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- KEYNOTE (impacto, arriba de speakers) -->
+    <!-- KEYNOTE (más grande e impactante) -->
     <section id="keynote" class="section" data-aos="fade-up">
       <div class="container">
         <h2>Keynote Speaker</h2>
 
-        <div class="keynote-hero card" data-aos="zoom-in">
+        <div class="keynote-hero keynote-hero--large card" data-aos="zoom-in">
           <div class="keynote-media">
-            <img src="/forodigital2027/assets/images/keynote.jpg" alt="Keynote Speaker" class="keynote-img" loading="lazy" />
+            <img src="/forodigital2027/assets/images/keynote-demo.jpg" alt="Keynote Demo" class="keynote-img" loading="lazy" />
           </div>
           <div class="keynote-content">
             <h3>Keynote por confirmar</h3>
             <p class="lead">Pronto anunciaremos al keynote principal. Su charla será un punto de encuentro para reflexionar sobre la estrategia y la ejecución en la era de la IA aplicada a la colaboración.</p>
-            <a class="btn btn-primary" href="#registro">Quiero asistir</a>
+            <div class="cta-row">
+              <a class="btn btn-primary" href="#registro">Quiero asistir</a>
+              <a class="btn btn-outline" href="#speakers">Ver speakers</a>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- SPEAKERS (por definir + CTA estilizado) -->
+    <!-- SPEAKERS (por definir + CTA) -->
     <section id="speakers" class="section" data-aos="fade-up">
       <div class="container">
         <h2>Speakers</h2>
@@ -200,7 +200,7 @@
           <p class="lead">Abrimos el Call for Speakers. Buscamos sesiones prácticas, casos reales y talleres aplicables.</p>
           <div class="cta-row">
             <a class="btn btn-primary" href="https://TU-FORMULARIO-CALL-FOR-SPEAKERS.com" target="_blank" rel="noopener">Postula tu sesión</a>
-            <a class="btn btn-outline" href="#por-que">Ver requisitos</a>
+            <a class="btn btn-outline" href="#why">Ver requisitos</a>
           </div>
         </div>
 
@@ -222,7 +222,29 @@
       </div>
     </section>
 
-    <!-- AGENDA (mantengo el estilo anterior que te gustaba) -->
+    <!-- EQUIPO (nuevo) -->
+    <section id="equipo" class="section" data-aos="fade-up">
+      <div class="container">
+        <h2>El equipo detrás</h2>
+        <p class="lead">Personas que organizan y hacen posible Foro Digital.</p>
+
+        <div class="grid-3">
+          <div class="card"><div class="avatar">R</div><h3>Nombre 1</h3><p>Rol / Organización</p></div>
+          <div class="card"><div class="avatar">A</div><h3>Nombre 2</h3><p>Rol / Organización</p></div>
+          <div class="card"><div class="avatar">M</div><h3>Nombre 3</h3><p>Rol / Organización</p></div>
+        </div>
+
+        <!-- plantilla comentada para más miembros -->
+        <!--
+        <div class="grid-3" aria-hidden="true">
+          <div class="card"><div class="avatar">4</div><h3>Nombre 4</h3><p>Rol</p></div>
+          ...
+        </div>
+        -->
+      </div>
+    </section>
+
+    <!-- AGENDA -->
     <section id="agenda" class="section" data-aos="fade-up">
       <div class="container">
         <h2>Agenda (resumen)</h2>
@@ -234,7 +256,7 @@
       </div>
     </section>
 
-    <!-- SPONSORS (por definir + CTA estilizado) -->
+    <!-- SPONSORS -->
     <section id="sponsors" class="section" data-aos="fade-up">
       <div class="container">
         <h2>Sponsors y aliados</h2>
@@ -244,7 +266,7 @@
           <p class="lead">Abrimos el Call for Sponsors. Si tu organización quiere apoyar la comunidad y mostrar soluciones, contáctanos.</p>
           <div class="cta-row">
             <a class="btn btn-primary" href="mailto:patrocinios@forodigital.com" rel="noopener">Call for Sponsors</a>
-            <a class="btn btn-outline" href="#por-que">Paquetes y beneficios</a>
+            <a class="btn btn-outline" href="#why">Paquetes y beneficios</a>
           </div>
         </div>
 
@@ -252,22 +274,13 @@
         <!--
         <div class="grid-4 sponsors-grid" aria-hidden="true">
           <div class="card sponsor-card">Sponsor 1</div>
-          <div class="card sponsor-card">Sponsor 2</div>
-          <div class="card sponsor-card">Sponsor 3</div>
-          <div class="card sponsor-card">Sponsor 4</div>
-          <div class="card sponsor-card">Sponsor 5</div>
-          <div class="card sponsor-card">Sponsor 6</div>
-          <div class="card sponsor-card">Sponsor 7</div>
-          <div class="card sponsor-card">Sponsor 8</div>
-          <div class="card sponsor-card">Sponsor 9</div>
-          <div class="card sponsor-card">Sponsor 10</div>
+          ...
         </div>
         -->
-
       </div>
     </section>
 
-    <!-- GALERÍA (restaurada al estilo anterior: grid con hover zoom) -->
+    <!-- GALERÍA -->
     <section id="galeria" class="section" data-aos="fade-up">
       <div class="container">
         <h2>Galería</h2>
@@ -284,7 +297,7 @@
       </div>
     </section>
 
-    <!-- REGISTRO (CTA centrado) -->
+    <!-- REGISTRO -->
     <section id="registro" class="section" data-aos="fade-up">
       <div class="container center">
         <h2>Registro</h2>
@@ -308,7 +321,7 @@
         <div class="footer-col">
           <h4>Enlaces</h4>
           <ul>
-            <li><a href="#acerca">Acerca</a></li>
+            <li><a href="#about">Acerca</a></li>
             <li><a href="#speakers">Speakers</a></li>
             <li><a href="#agenda">Agenda</a></li>
             <li><a href="#registro">Registro</a></li>
