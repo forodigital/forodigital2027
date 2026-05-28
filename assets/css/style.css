@@ -1,9 +1,8 @@
 :root{
-  /* Variables de marca dinámicas: se actualizan en tiempo real desde el logo */
-  --brand-primary: #ff4ecb;   /* fallback, será reemplazado por script */
-  --brand-secondary: #4ea8ff; /* fallback, será reemplazado por script */
+  /* Colores fijos solicitados por el cliente */
+  --brand-primary: #F43D6B;   /* principal */
+  --brand-secondary: #2F5FA7; /* secundario */
 
-  /* variables derivadas (usadas por el layout) */
   --rosa: var(--brand-primary);
   --azul: var(--brand-secondary);
 
