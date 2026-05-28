@@ -1,218 +1,269 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Foro Digital 2027</title>
-  <meta name="description" content="Foro Digital 2027: el evento que conecta a líderes, creadores y visionarios del futuro digital." />
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Foro Digital 2027 — 10ª edición (antes Get-CsLatam)</title>
+  <meta name="description" content="Foro Digital 2027 (antes Get-CsLatam). Décima edición: abierto a todas las soluciones. Contenido de valor para líderes, creadores y equipos." />
+  <meta property="og:title" content="Foro Digital 2027 — 10ª edición" />
+  <meta property="og:description" content="Décima edición del evento que nació como Get-CsLatam. Ahora abierto a todas las soluciones." />
+  <meta property="og:image" content="/forodigital2027/assets/images/hero-bg.jpg" />
 
   <!-- Estilos -->
- <link rel="stylesheet" href="/forodigital2027/assets/css/style.css" />
+  <link rel="stylesheet" href="/forodigital2027/assets/css/style.css" />
 
-  <!-- AOS Animations -->
+  <!-- AOS (animaciones al hacer scroll) -->
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 </head>
 <body>
 
-  <!-- NAVBAR -->
-  <nav class="navbar">
-    <div class="nav-container">
-      <div class="logo">
-        <!-- Si tienes logo en imagen, cámbialo aquí -->
-        <span>Foro Digital 2027</span>
-      </div>
-      <ul class="nav-links">
-        <li><a href="#acerca">Acerca</a></li>
-        <li><a href="#speakers">Speakers</a></li>
-        <li><a href="#agenda">Agenda</a></li>
-        <li><a href="#sponsors">Sponsors</a></li>
-        <li><a href="#galeria">Galería</a></li>
-        <li><a href="#registro" class="nav-cta">Registro</a></li>
+  <!-- NAV -->
+  <nav class="navbar" role="navigation" aria-label="Navegación principal">
+    <div class="nav-inner">
+      <a class="brand" href="#home" aria-label="Ir al inicio">
+        <img src="/forodigital2027/assets/images/logo.png" alt="Foro Digital 2027" class="logo-img" />
+      </a>
+
+      <button id="nav-toggle" class="nav-toggle" aria-controls="nav-menu" aria-expanded="false" aria-label="Abrir menú">
+        <span class="hamburger" aria-hidden="true"></span>
+      </button>
+
+      <ul id="nav-menu" class="nav-menu" role="menubar" aria-label="Menú principal">
+        <li role="none"><a role="menuitem" href="#acerca">Acerca</a></li>
+        <li role="none"><a role="menuitem" href="#stats">Datos</a></li>
+        <li role="none"><a role="menuitem" href="#speakers">Speakers</a></li>
+        <li role="none"><a role="menuitem" href="#agenda">Agenda</a></li>
+        <li role="none"><a role="menuitem" href="#sponsors">Sponsors</a></li>
+        <li role="none"><a role="menuitem" href="#galeria">Galería</a></li>
+        <li role="none"><a role="menuitem" href="#keynote">Keynote</a></li>
+        <li role="none"><a role="menuitem" href="#registro" class="nav-cta">Registro</a></li>
       </ul>
     </div>
   </nav>
 
   <!-- HERO -->
-  <header class="hero animated-bg">
-    <div class="hero-overlay"></div>
-    <div class="hero-content" data-aos="fade-up">
-      <p class="hero-tagline">Conectando el futuro digital</p>
-      <h1 class="gradient-text">Foro Digital 2027</h1>
-      <p class="hero-subtitle">
-        Un espacio para líderes, creadores y visionarios que están transformando los negocios, la tecnología y la experiencia humana.
+  <header id="home" class="hero hero-with-image" role="banner" aria-label="Hero principal">
+    <div class="hero-overlay" aria-hidden="true"></div>
+
+    <div class="hero-inner" data-aos="fade-up">
+      <p class="hero-pretitle">Décima edición — Antes Get-CsLatam</p>
+      <h1 class="hero-title gradient-text">Foro Digital 2027</h1>
+      <p class="hero-lead">
+        La evolución del evento que conociste como Get-CsLatam. Este año abrimos el escenario a todas las soluciones y comunidades: tecnología, negocios y personas.
       </p>
 
-      <div class="hero-details">
-        <span>📍 Online & Presencial</span>
-        <span>📅 2027</span>
-        <span>🎯 Negocios · Tecnología · Innovación</span>
+      <ul class="hero-meta" aria-hidden="false">
+        <li>📅 2027 · 2 días</li>
+        <li>🎤 25+ speakers</li>
+        <li>🔁 40+ sesiones</li>
+        <li>🤝 Sponsors y aliados</li>
+      </ul>
+
+      <div class="hero-ctas">
+        <a class="cta-primary" href="https://TU-PORTAL-DE-REGISTRO.com" target="_blank" rel="noopener">Ir al registro</a>
+        <a class="cta-ghost" href="#acerca">Más información</a>
       </div>
 
-      <a href="#registro" class="cta-button" data-aos="zoom-in" data-aos-delay="300">
-        Regístrate Gratis
-      </a>
-
       <p class="hero-note">
-        Cupo limitado · Acceso a sesiones en vivo, networking y contenido exclusivo.
+        Antes fuimos un evento centrado en Microsoft; ahora somos un foro abierto a todas las soluciones. Contenido práctico, networking y casos reales.
       </p>
     </div>
   </header>
 
-  <!-- ACERCA -->
-  <section id="acerca" data-aos="fade-up">
-    <h2>¿Qué es Foro Digital 2027?</h2>
-    <p class="section-intro">
-      Foro Digital 2027 es el punto de encuentro para quienes quieren entender, liderar y aprovechar la transformación digital.
-      No es solo un evento: es una experiencia diseñada para inspirar acción, conectar personas y generar oportunidades reales.
-    </p>
+  <!-- MAIN -->
+  <main>
 
-    <div class="grid-3">
-      <div class="card">
-        <h3>Visión</h3>
-        <p>
-          Crear un espacio donde la tecnología, los negocios y las personas se encuentren para construir el futuro de forma consciente y estratégica.
-        </p>
-      </div>
-      <div class="card">
-        <h3>Para quién</h3>
-        <p>
-          Líderes, emprendedores, equipos de marketing, tecnología, ventas, RRHH y cualquier persona que quiera entender el impacto digital en su organización.
-        </p>
-      </div>
-      <div class="card">
-        <h3>Por qué ahora</h3>
-        <p>
-          El cambio ya está aquí. Las organizaciones que entienden, aprenden y se adaptan hoy, serán las que lideren mañana.
-        </p>
-      </div>
-    </div>
-  </section>
+    <!-- ABOUT (contenido histórico adaptado) -->
+    <section id="acerca" class="section" data-aos="fade-up">
+      <h2>About Get-CsLatam 2026 - Conference and Expo</h2>
 
-  <!-- SPEAKERS -->
-  <section id="speakers" data-aos="fade-up">
-    <h2>Speakers</h2>
-    <p class="section-intro">
-      Voces que ya están haciendo realidad el futuro digital. Historias, estrategias y aprendizajes sin filtros.
-    </p>
+      <p class="lead">
+        Get-CsLatam Conference fue el punto de encuentro más relevante en Latinoamérica para profesionales que lideran la transformación digital con tecnologías Microsoft. Durante esa edición se exploraron las últimas tendencias en Comunicaciones Unificadas, Colaboración, Productividad, Inteligencia Artificial y Modern Workplace, de la mano de los principales referentes del sector.
+      </p>
 
-    <div class="grid-3">
-      <div class="card speaker-card">
-        <div class="speaker-avatar">A</div>
-        <h3>Speaker 1</h3>
-        <p>Especialista en transformación digital y estrategia de negocio.</p>
-      </div>
-      <div class="card speaker-card">
-        <div class="speaker-avatar">B</div>
-        <h3>Speaker 2</h3>
-        <p>Experto en experiencia de cliente, data y automatización.</p>
-      </div>
-      <div class="card speaker-card">
-        <div class="speaker-avatar">C</div>
-        <h3>Speaker 3</h3>
-        <p>Líder en innovación, cultura digital y cambio organizacional.</p>
-      </div>
-    </div>
-  </section>
+      <p>
+        El evento reunió a expertos internacionales, Microsoft MVPs y representantes oficiales de Microsoft México y Microsoft Corp, quienes compartieron conocimientos prácticos, casos de éxito y estrategias que están redefiniendo la forma en que trabajamos.
+      </p>
 
-  <!-- AGENDA -->
-  <section id="agenda" data-aos="fade-up">
-    <h2>Agenda</h2>
-    <p class="section-intro">
-      Una agenda diseñada para inspirar, retar y activar ideas que puedas llevar a la acción.
-    </p>
+      <h3>¿Por qué participar?</h3>
+      <ul class="benefits">
+        <li><strong>Aprendizaje directo de líderes:</strong> Accede a contenido exclusivo impartido por especialistas reconocidos en el ecosistema Microsoft.</li>
+        <li><strong>Networking de alto valor:</strong> Conecta con profesionales de toda la región, genera alianzas y descubre nuevas oportunidades.</li>
+        <li><strong>Innovación aplicada:</strong> Conoce herramientas y soluciones que pueden transformar tu organización.</li>
+        <li><strong>Desarrollo profesional:</strong> Mejora tus habilidades en sesiones interactivas, talleres y paneles especializados.</li>
+      </ul>
 
-    <div class="agenda-list">
-      <div class="agenda-item card">
-        <h3>Apertura: El estado del mundo digital</h3>
-        <p>Una mirada clara a las tendencias que están redefiniendo cómo trabajamos, compramos y nos relacionamos.</p>
-      </div>
-      <div class="agenda-item card">
-        <h3>Panel: Negocios, datos y personas</h3>
-        <p>Conversación honesta sobre cómo alinear tecnología con estrategia y cultura.</p>
-      </div>
-      <div class="agenda-item card">
-        <h3>Sesiones tácticas</h3>
-        <p>Casos reales, herramientas y frameworks para aplicar en tu organización.</p>
-      </div>
-    </div>
-  </section>
+      <p class="lead-cta">
+        Participar en Get-CsLatam Conference te posiciona en la vanguardia tecnológica, fortalece tu perfil profesional y abre nuevas puertas para tu crecimiento. Forma parte de la comunidad más influyente de Latinoamérica y lleva tu conocimiento al siguiente nivel.
+      </p>
 
-  <!-- SPONSORS -->
-  <section id="sponsors" data-aos="fade-up">
-    <h2>Sponsors & Aliados</h2>
-    <p class="section-intro">
-      Marcas y organizaciones que creen en el poder de la colaboración y el futuro digital.
-    </p>
+      <p class="muted-note">
+        Nota: Get-CsLatam nació hace 10 años. Para esta décima edición evolucionamos a <strong>Foro Digital</strong> para abrir el escenario a todas las soluciones y comunidades, manteniendo la calidad técnica y la comunidad que nos caracteriza.
+      </p>
+    </section>
 
-    <div class="grid-4">
-      <div class="card sponsor-card">Logo Sponsor 1</div>
-      <div class="card sponsor-card">Logo Sponsor 2</div>
-      <div class="card sponsor-card">Logo Sponsor 3</div>
-      <div class="card sponsor-card">Logo Sponsor 4</div>
-    </div>
-  </section>
+    <!-- STATS -->
+    <section id="stats" class="section section-stats" data-aos="fade-up">
+      <h2>Datos clave</h2>
 
-  <!-- GALERÍA -->
-  <section id="galeria" data-aos="fade-up">
-    <h2>Galería</h2>
-    <p class="section-intro">
-      Momentos, conexiones y experiencias de ediciones anteriores y proyectos relacionados.
-    </p>
-
-    <div class="grid-3 gallery-grid">
-      <div class="gallery-item card">Foto 1</div>
-      <div class="gallery-item card">Foto 2</div>
-      <div class="gallery-item card">Foto 3</div>
-    </div>
-  </section>
-
-  <!-- REGISTRO -->
-  <section id="registro" data-aos="fade-up">
-    <h2>Regístrate</h2>
-    <p class="section-intro">
-      Déjanos tus datos y sé parte de la conversación que está definiendo el futuro digital.
-    </p>
-
-    <div class="card form-card">
-      <!-- Si luego usas un formulario real (Typeform, Forms, etc.), lo pegamos aquí -->
-      <form>
-        <div class="form-group">
-          <label for="nombre">Nombre completo</label>
-          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+      <div class="stats-grid" role="list">
+        <div class="stat-card" role="listitem" data-aos="zoom-in">
+          <div class="stat-number">2</div>
+          <div class="stat-label">Días de contenido</div>
         </div>
-        <div class="form-group">
-          <label for="email">Correo electrónico</label>
-          <input type="email" id="email" name="email" placeholder="tucorreo@ejemplo.com" required />
+
+        <div class="stat-card" role="listitem" data-aos="zoom-in" data-aos-delay="80">
+          <div class="stat-number">25+</div>
+          <div class="stat-label">Speakers</div>
         </div>
-        <div class="form-group">
-          <label for="rol">Rol / Perfil</label>
-          <input type="text" id="rol" name="rol" placeholder="Ej. Director, Marketing, Tecnología, Emprendedor" />
+
+        <div class="stat-card" role="listitem" data-aos="zoom-in" data-aos-delay="160">
+          <div class="stat-number">40+</div>
+          <div class="stat-label">Sesiones</div>
         </div>
-        <button type="submit" class="cta-button full-width">
-          Quiero ser parte
-        </button>
-        <p class="form-note">
-          No spam. Solo información relevante sobre el evento y contenido de valor.
-        </p>
-      </form>
-    </div>
-  </section>
+
+        <div class="stat-card" role="listitem" data-aos="zoom-in" data-aos-delay="240">
+          <div class="stat-number">10+</div>
+          <div class="stat-label">Sponsors</div>
+        </div>
+
+        <div class="stat-card" role="listitem" data-aos="zoom-in" data-aos-delay="320">
+          <div class="stat-number">Gratis</div>
+          <div class="stat-label">Costo</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SPEAKERS -->
+    <section id="speakers" class="section" data-aos="fade-up">
+      <h2>Speakers destacados</h2>
+      <p class="lead">Voces que comparten estrategia, tácticas y casos reales.</p>
+
+      <div class="grid-3">
+        <article class="card speaker-card" data-aos="fade-up">
+          <div class="avatar">A</div>
+          <h3>Speaker 1</h3>
+          <p>Transformación digital y estrategia.</p>
+        </article>
+
+        <article class="card speaker-card" data-aos="fade-up" data-aos-delay="80">
+          <div class="avatar">B</div>
+          <h3>Speaker 2</h3>
+          <p>Experiencia de cliente y datos.</p>
+        </article>
+
+        <article class="card speaker-card" data-aos="fade-up" data-aos-delay="160">
+          <div class="avatar">C</div>
+          <h3>Speaker 3</h3>
+          <p>Innovación y cultura organizacional.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- AGENDA -->
+    <section id="agenda" class="section" data-aos="fade-up">
+      <h2>Agenda (resumen)</h2>
+      <p class="lead">Sesiones diseñadas para aprender y aplicar.</p>
+
+      <div class="agenda-grid">
+        <div class="card">
+          <h4>Apertura</h4>
+          <p>Panorama del ecosistema y tendencias clave.</p>
+        </div>
+        <div class="card">
+          <h4>Paneles</h4>
+          <p>Negocios, tecnología y personas: cómo alinear estrategia y ejecución.</p>
+        </div>
+        <div class="card">
+          <h4>Sesiones prácticas</h4>
+          <p>Herramientas, frameworks y casos aplicables.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SPONSORS -->
+    <section id="sponsors" class="section" data-aos="fade-up">
+      <h2>Sponsors y aliados</h2>
+      <p class="lead">Organizaciones que apoyan la comunidad y el contenido.</p>
+
+      <div class="grid-4 sponsors-grid">
+        <div class="card sponsor-card">Sponsor 1</div>
+        <div class="card sponsor-card">Sponsor 2</div>
+        <div class="card sponsor-card">Sponsor 3</div>
+        <div class="card sponsor-card">Sponsor 4</div>
+      </div>
+    </section>
+
+    <!-- KEYNOTE (visible ahora, ocultable después) -->
+    <section id="keynote" class="section" data-aos="fade-up">
+      <h2>Keynote Speaker</h2>
+
+      <div class="keynote-card card">
+        <img src="/forodigital2027/assets/images/keynote.jpg" alt="Keynote Speaker" class="keynote-img" />
+        <div class="keynote-body">
+          <h3>Nombre del Keynote</h3>
+          <p>Breve descripción del keynote y por qué su charla es imperdible. (Esta sección puede ocultarse cuando confirmes el speaker final.)</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- GALERÍA -->
+    <section id="galeria" class="section" data-aos="fade-up">
+      <h2>Galería</h2>
+      <p class="lead">Momentos y experiencias de ediciones anteriores.</p>
+
+      <div class="grid-3 gallery-grid">
+        <div class="card gallery-item"><img src="/forodigital2027/assets/images/foto1.jpg" alt="Foto 1" /></div>
+        <div class="card gallery-item"><img src="/forodigital2027/assets/images/foto2.jpg" alt="Foto 2" /></div>
+        <div class="card gallery-item"><img src="/forodigital2027/assets/images/foto3.jpg" alt="Foto 3" /></div>
+        <div class="card gallery-item"><img src="/forodigital2027/assets/images/foto4.jpg" alt="Foto 4" /></div>
+        <div class="card gallery-item"><img src="/forodigital2027/assets/images/foto5.jpg" alt="Foto 5" /></div>
+        <div class="card gallery-item"><img src="/forodigital2027/assets/images/foto6.jpg" alt="Foto 6" /></div>
+      </div>
+    </section>
+
+    <!-- REGISTRO (solo botón) -->
+    <section id="registro" class="section" data-aos="fade-up">
+      <h2>Registro</h2>
+      <p class="lead">Regístrate en el portal oficial para asegurar tu lugar.</p>
+
+      <div class="center">
+        <a class="cta-primary large" href="https://TU-PORTAL-DE-REGISTRO.com" target="_blank" rel="noopener">Ir al portal de registro</a>
+      </div>
+    </section>
+
+  </main>
 
   <!-- FOOTER -->
-  <footer>
-    <p>© Foro Digital 2027 · Todos los derechos reservados.</p>
-    <p class="footer-small">
-      Diseñado para inspirar, conectar y activar el futuro digital.
-    </p>
+  <footer class="site-footer" role="contentinfo">
+    <div class="footer-inner">
+      <p>© Foro Digital 2027 · Décima edición (antes Get-CsLatam). Abierto a todas las soluciones.</p>
+      <p class="muted">Diseñado para inspirar, conectar y activar el futuro digital.</p>
+    </div>
   </footer>
 
-  <!-- Scripts AOS -->
+  <!-- Scripts -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    AOS.init({
-      duration: 900,
-      once: true
-    });
+    AOS.init({ duration: 900, once: true });
+
+    // Toggle menú hamburguesa
+    (function() {
+      const btn = document.getElementById('nav-toggle');
+      const menu = document.getElementById('nav-menu');
+      btn.addEventListener('click', () => {
+        const expanded = btn.getAttribute('aria-expanded') === 'true' || false;
+        btn.setAttribute('aria-expanded', !expanded);
+        menu.classList.toggle('open');
+      });
+      // Cerrar menú al hacer click en enlace (móvil)
+      document.querySelectorAll('#nav-menu a').forEach(a => {
+        a.addEventListener('click', () => {
+          menu.classList.remove('open');
+          btn.setAttribute('aria-expanded', 'false');
+        });
+      });
+    })();
   </script>
 </body>
 </html>
