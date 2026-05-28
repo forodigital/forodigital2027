@@ -215,7 +215,7 @@
       </div>
     </section>
 
-    <!-- EQUIPO (detallado con bios) -->
+    <!-- EQUIPO -->
     <section id="equipo" class="section" data-aos="fade-up">
       <div class="container">
         <h2>El equipo detrás</h2>
@@ -263,13 +263,6 @@
             </div>
           </article>
         </div>
-
-        <!-- plantilla comentada para más miembros -->
-        <!--
-        <div class="team-grid" aria-hidden="true">
-          <article class="team-card">...</article>
-        </div>
-        -->
       </div>
     </section>
 
@@ -298,14 +291,6 @@
             <a class="btn btn-outline" href="#why">Paquetes y beneficios</a>
           </div>
         </div>
-
-        <!-- Plantilla comentada: 10 slots -->
-        <!--
-        <div class="grid-4 sponsors-grid" aria-hidden="true">
-          <div class="card sponsor-card">Sponsor 1</div>
-          ...
-        </div>
-        -->
       </div>
     </section>
 
@@ -368,7 +353,6 @@
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-  <!-- Script: extrae color del logo y actualiza variables CSS -->
   <script>
     AOS.init({ duration: 800, once: true });
 
@@ -387,123 +371,6 @@
           btn.setAttribute('aria-expanded', 'false');
         });
       });
-    })();
-
-    // Color branding: extrae color predominante del logo y actualiza :root
-    (function() {
-      const logoPath = '/forodigital2027/assets/images/logo.png'; // Cambia si tu logo tiene otro nombre/ruta
-      const fallbackPrimary = '#ff4ecb';
-      const fallbackSecondary = '#4ea8ff';
-
-      function rgbToHsl(r,g,b){
-        r/=255; g/=255; b/=255;
-        const max=Math.max(r,g,b), min=Math.min(r,g,b);
-        let h,s,l=(max+min)/2;
-        if(max===min){h=s=0;} else {
-          const d=max-min;
-          s = l>0.5 ? d/(2-max-min) : d/(max+min);
-          switch(max){
-            case r: h=(g-b)/d + (g<b?6:0); break;
-            case g: h=(b-r)/d + 2; break;
-            case b: h=(r-g)/d + 4; break;
-          }
-          h/=6;
-        }
-        return [h*360, s, l];
-      }
-      function hslToRgb(h,s,l){
-        h/=360;
-        let r,g,b;
-        if(s===0){ r=g=b=l; }
-        else {
-          const hue2rgb = (p,q,t) => {
-            if(t<0) t+=1;
-            if(t>1) t-=1;
-            if(t<1/6) return p + (q-p)*6*t;
-            if(t<1/2) return q;
-            if(t<2/3) return p + (q-p)*(2/3 - t)*6;
-            return p;
-          };
-          const q = l<0.5 ? l*(1+s) : l+s - l*s;
-          const p = 2*l - q;
-          r = hue2rgb(p,q,h+1/3);
-          g = hue2rgb(p,q,h);
-          b = hue2rgb(p,q,h-1/3);
-        }
-        return [Math.round(r*255), Math.round(g*255), Math.round(b*255)];
-      }
-
-      function setBrandColors(primaryRgb){
-        const [r,g,b] = primaryRgb;
-        const [h,s,l] = rgbToHsl(r,g,b);
-        // Secondary: desplazar matiz +30 grados, ajustar saturación y ligereza para contraste
-        const secH = (h + 30) % 360;
-        const secS = Math.min(1, s * 0.9 + 0.05);
-        const secL = Math.max(0.25, Math.min(0.65, l * 0.9 + 0.05));
-        const secRgb = hslToRgb(secH, secS, secL);
-        const primaryHex = rgbToHex(r,g,b);
-        const secondaryHex = rgbToHex(secRgb[0], secRgb[1], secRgb[2]);
-
-        document.documentElement.style.setProperty('--brand-primary', primaryHex);
-        document.documentElement.style.setProperty('--brand-secondary', secondaryHex);
-        // Also set derived variables for gradients used elsewhere
-        document.documentElement.style.setProperty('--rosa', primaryHex);
-        document.documentElement.style.setProperty('--azul', secondaryHex);
-      }
-
-      function rgbToHex(r,g,b){
-        return '#' + [r,g,b].map(x => x.toString(16).padStart(2,'0')).join('');
-      }
-
-      // Cargar imagen y muestrear
-      const img = new Image();
-      img.crossOrigin = 'anonymous';
-      img.src = logoPath + '?_=' + Date.now();
-      img.onload = () => {
-        try {
-          const canvas = document.createElement('canvas');
-          const ctx = canvas.getContext('2d');
-          // reducir tamaño para performance
-          const w = Math.min(120, img.width);
-          const h = Math.min(120, img.height);
-          canvas.width = w;
-          canvas.height = h;
-          ctx.drawImage(img, 0, 0, w, h);
-          const data = ctx.getImageData(0,0,w,h).data;
-          let r=0,g=0,b=0,count=0;
-          for(let i=0;i<data.length;i+=4){
-            const alpha = data[i+3];
-            if(alpha < 128) continue; // ignorar transparencias
-            const rr = data[i], gg = data[i+1], bb = data[i+2];
-            // ignorar píxeles casi blancos o casi negros para evitar sesgo
-            const brightness = (rr+gg+bb)/3;
-            if(brightness > 245 || brightness < 10) continue;
-            r += rr; g += gg; b += bb; count++;
-          }
-          if(count === 0){
-            // fallback: usar centro del logo
-            const mid = ctx.getImageData(Math.floor(w/2), Math.floor(h/2), 1,1).data;
-            setBrandColors([mid[0], mid[1], mid[2]]);
-          } else {
-            setBrandColors([Math.round(r/count), Math.round(g/count), Math.round(b/count)]);
-          }
-        } catch(e){
-          // fallback
-          document.documentElement.style.setProperty('--brand-primary', fallbackPrimary);
-          document.documentElement.style.setProperty('--brand-secondary', fallbackSecondary);
-          document.documentElement.style.setProperty('--rosa', fallbackPrimary);
-          document.documentElement.style.setProperty('--azul', fallbackSecondary);
-          console.warn('No se pudo extraer color del logo, usando fallback.', e);
-        }
-      };
-      img.onerror = () => {
-        // fallback
-        document.documentElement.style.setProperty('--brand-primary', fallbackPrimary);
-        document.documentElement.style.setProperty('--brand-secondary', fallbackSecondary);
-        document.documentElement.style.setProperty('--rosa', fallbackPrimary);
-        document.documentElement.style.setProperty('--azul', fallbackSecondary);
-        console.warn('No se pudo cargar logo para extracción de color. Asegura /assets/images/logo.png');
-      };
     })();
   </script>
 </body>
