@@ -17,43 +17,31 @@
 </head>
 <body>
 
-  <!-- HEADER (blanco, minimalista) -->
-  <header class="site-header">
+  <!-- HEADER (negro, sin logo) -->
+  <header class="site-header site-header--dark">
     <div class="header-inner">
-      <a href="#home" class="header-brand" aria-label="Inicio">
-        <!-- logo pequeño en header; logo grande está en hero -->
-        <img src="/forodigital2027/assets/images/logo.png" alt="Foro Digital" class="header-logo" />
-      </a>
+      <nav class="top-nav" role="navigation" aria-label="Menú principal">
+        <button id="nav-toggle" class="nav-toggle" aria-controls="nav-menu" aria-expanded="false" aria-label="Abrir menú">
+          <span class="hamburger" aria-hidden="true"></span>
+        </button>
 
-      <button id="nav-toggle" class="nav-toggle" aria-controls="nav-menu" aria-expanded="false" aria-label="Abrir menú">
-        <span class="hamburger" aria-hidden="true"></span>
-      </button>
-
-      <nav id="nav-menu" class="nav-menu" role="navigation" aria-label="Menú principal">
-        <a href="#acerca">Acerca</a>
-        <a href="#stats">Datos</a>
-        <a href="#speakers">Speakers</a>
-        <a href="#agenda">Agenda</a>
-        <a href="#sponsors">Sponsors</a>
-        <a href="#galeria">Galería</a>
-        <a href="#registro" class="nav-cta">Registro</a>
+        <div id="nav-menu" class="nav-menu" role="menubar" aria-label="Navegación">
+          <a role="menuitem" href="#acerca">Acerca</a>
+          <a role="menuitem" href="#por-que">Por qué asistir</a>
+          <a role="menuitem" href="#stats">Datos</a>
+          <a role="menuitem" href="#speakers">Speakers</a>
+          <a role="menuitem" href="#agenda">Agenda</a>
+          <a role="menuitem" href="#galeria">Galería</a>
+          <a role="menuitem" href="#registro" class="nav-cta">Registro</a>
+        </div>
       </nav>
     </div>
   </header>
 
-  <!-- HERO (TIPOGRAFÍA PROTAGONISTA) -->
-  <!-- Si quieres activar la imagen de fondo, cambia class="hero hero--text" por class="hero hero--image" -->
+  <!-- HERO (TIPOGRAFÍA PROTAGONISTA + LOGO GRANDE) -->
+  <!-- Por defecto hero prioriza tipografía. Si quieres la foto de fondo activa, cambia class="hero hero--text" por class="hero hero--image" -->
   <section id="home" class="hero hero--text" aria-label="Hero principal">
-    <div class="hero-shapes" aria-hidden="true">
-      <!-- SVG shapes for subtle motion -->
-      <svg class="shape shape-1" viewBox="0 0 600 200" preserveAspectRatio="none" aria-hidden="true">
-        <defs><linearGradient id="g1" x1="0" x2="1"><stop offset="0" stop-color="#ff4ecb"/><stop offset="1" stop-color="#4ea8ff"/></linearGradient></defs>
-        <path d="M0,100 C150,200 450,0 600,100 L600 200 L0 200 Z" fill="url(#g1)" opacity="0.08"></path>
-      </svg>
-      <svg class="shape shape-2" viewBox="0 0 600 200" preserveAspectRatio="none" aria-hidden="true">
-        <path d="M0,120 C200,0 400,240 600,120 L600 200 L0 200 Z" fill="#ff4ecb" opacity="0.04"></path>
-      </svg>
-    </div>
+    <div class="hero-bg-animated" aria-hidden="true"></div>
 
     <div class="hero-inner" data-aos="fade-up">
       <!-- Logo grande dentro del hero para protagonismo -->
@@ -63,12 +51,13 @@
 
       <p class="hero-pretitle">Décima edición</p>
 
+      <!-- Título con efecto degradado animado en "2027" -->
       <h1 class="hero-title">
         Foro Digital <span class="title-gradient">2027</span>
       </h1>
 
       <p class="hero-sub">
-        Evolucionamos: dejamos atrás el nombre anterior y abrimos el foro a todas las soluciones de colaboración, comunicaciones unificadas y productividad impulsadas por IA. Diez años de experiencia, ahora con un escenario más amplio y práctico.
+        Evolucionamos: ahora somos <strong>Foro Digital</strong>. Conservamos la experiencia de 10 años y abrimos el escenario a todas las soluciones de colaboración, comunicaciones unificadas y productividad impulsadas por IA.
       </p>
 
       <ul class="hero-meta" aria-hidden="false">
@@ -90,28 +79,32 @@
   <!-- MAIN -->
   <main>
 
-    <!-- ABOUT (reescrito y alineado) -->
+    <!-- ABOUT -->
     <section id="acerca" class="section" data-aos="fade-up">
       <div class="container">
-        <h2>Qué ofrecemos ahora como Foro Digital</h2>
+        <h2>Qué ofrecemos como Foro Digital</h2>
 
         <div class="about-grid">
           <div class="about-text">
             <p class="lead">
-              Durante una década fuimos conocidos por reunir a la comunidad técnica y de comunicaciones bajo el nombre anterior. Hoy, como <strong>Foro Digital</strong>, ampliamos ese propósito: conectamos a profesionales, fabricantes y proveedores para compartir soluciones reales, casos aplicables y estrategias que impulsan resultados.
+              Durante diez años reunimos a la comunidad técnica y de comunicaciones bajo un nombre conocido. Hoy, como <strong>Foro Digital</strong>, ampliamos ese propósito: conectamos profesionales, fabricantes y proveedores para compartir soluciones prácticas, casos aplicables y estrategias que generan resultados.
             </p>
 
             <p>
-              Nuestro enfoque es práctico: sesiones con aprendizajes accionables, talleres con herramientas aplicables y espacios de networking que generan alianzas. Aquí encontrarás contenido útil para tomar decisiones y acelerar proyectos en tu organización.
+              Nuestro enfoque es claro: contenido accionable que puedas aplicar en proyectos reales, demostraciones de soluciones de distintos fabricantes y espacios de networking diseñados para crear alianzas y oportunidades de negocio.
             </p>
 
-            <h3>Beneficios clave</h3>
+            <h3 id="por-que">Por qué asistir</h3>
             <ul class="benefits">
-              <li><strong>Contenido práctico:</strong> sesiones y talleres con frameworks y casos reales.</li>
-              <li><strong>Conexiones estratégicas:</strong> networking con líderes, proveedores y partners.</li>
-              <li><strong>Soluciones diversas:</strong> demostraciones y debates sobre herramientas de múltiples fabricantes.</li>
-              <li><strong>Formación aplicada:</strong> mejora de habilidades con sesiones interactivas y paneles especializados.</li>
+              <li><strong>Aprendizaje directo de líderes:</strong> sesiones impartidas por especialistas y referentes del sector con casos prácticos y frameworks aplicables.</li>
+              <li><strong>Networking de alto valor:</strong> conecta con profesionales, partners y fabricantes para generar alianzas estratégicas.</li>
+              <li><strong>Innovación aplicada:</strong> descubre soluciones y demos que puedes evaluar e implementar en tu organización.</li>
+              <li><strong>Desarrollo profesional:</strong> talleres y paneles que mejoran habilidades y aceleran proyectos.</li>
             </ul>
+
+            <p class="lead-cta">
+              Participar te posiciona en la vanguardia tecnológica y te conecta con la comunidad que impulsa la transformación digital en Latinoamérica.
+            </p>
           </div>
 
           <aside class="about-cta" aria-hidden="false">
@@ -192,19 +185,25 @@
       </div>
     </section>
 
-    <!-- GALERÍA (nombres corregidos) -->
+    <!-- GALERÍA (CARRUSEL) -->
     <section id="galeria" class="section" data-aos="fade-up">
       <div class="container">
         <h2>Galería</h2>
         <p class="lead">Momentos y experiencias de ediciones anteriores.</p>
 
-        <div class="gallery-grid">
-          <div class="gallery-item card"><img src="/forodigital2027/assets/images/gallery (1).JPG" alt="Galería 1" loading="lazy" /></div>
-          <div class="gallery-item card"><img src="/forodigital2027/assets/images/gallery (2).JPG" alt="Galería 2" loading="lazy" /></div>
-          <div class="gallery-item card"><img src="/forodigital2027/assets/images/gallery (3).JPG" alt="Galería 3" loading="lazy" /></div>
-          <div class="gallery-item card"><img src="/forodigital2027/assets/images/gallery (4).JPG" alt="Galería 4" loading="lazy" /></div>
-          <div class="gallery-item card"><img src="/forodigital2027/assets/images/gallery (5).JPG" alt="Galería 5" loading="lazy" /></div>
-          <div class="gallery-item card"><img src="/forodigital2027/assets/images/gallery (6).JPG" alt="Galería 6" loading="lazy" /></div>
+        <div class="carousel" id="galleryCarousel" aria-roledescription="carousel">
+          <button class="carousel-btn prev" aria-label="Anterior">‹</button>
+
+          <div class="carousel-track">
+            <div class="carousel-slide"><img src="/forodigital2027/assets/images/gallery%20(1).JPG" alt="Galería 1" loading="lazy"></div>
+            <div class="carousel-slide"><img src="/forodigital2027/assets/images/gallery%20(2).JPG" alt="Galería 2" loading="lazy"></div>
+            <div class="carousel-slide"><img src="/forodigital2027/assets/images/gallery%20(3).JPG" alt="Galería 3" loading="lazy"></div>
+            <div class="carousel-slide"><img src="/forodigital2027/assets/images/gallery%20(4).JPG" alt="Galería 4" loading="lazy"></div>
+            <div class="carousel-slide"><img src="/forodigital2027/assets/images/gallery%20(5).JPG" alt="Galería 5" loading="lazy"></div>
+            <div class="carousel-slide"><img src="/forodigital2027/assets/images/gallery%20(6).JPG" alt="Galería 6" loading="lazy"></div>
+          </div>
+
+          <button class="carousel-btn next" aria-label="Siguiente">›</button>
         </div>
       </div>
     </section>
@@ -267,6 +266,58 @@
           btn.setAttribute('aria-expanded', 'false');
         });
       });
+    })();
+
+    // Carousel simple, responsive, autoplay
+    (function() {
+      const track = document.querySelector('.carousel-track');
+      const slides = Array.from(track.children);
+      const prevBtn = document.querySelector('.carousel-btn.prev');
+      const nextBtn = document.querySelector('.carousel-btn.next');
+      let index = 0;
+      const slideCount = slides.length;
+
+      function update() {
+        const width = track.clientWidth;
+        track.style.transform = `translateX(-${index * width}px)`;
+      }
+
+      // Resize observer to keep slides full width
+      window.addEventListener('resize', update);
+      // Buttons
+      prevBtn.addEventListener('click', () => {
+        index = (index - 1 + slideCount) % slideCount;
+        update();
+      });
+      nextBtn.addEventListener('click', () => {
+        index = (index + 1) % slideCount;
+        update();
+      });
+
+      // Autoplay
+      let autoplay = setInterval(() => {
+        index = (index + 1) % slideCount;
+        update();
+      }, 3500);
+
+      // Pause on hover
+      const carousel = document.querySelector('.carousel');
+      carousel.addEventListener('mouseenter', () => clearInterval(autoplay));
+      carousel.addEventListener('mouseleave', () => {
+        autoplay = setInterval(() => {
+          index = (index + 1) % slideCount;
+          update();
+        }, 3500);
+      });
+
+      // Initialize slide widths
+      function setSlideWidths() {
+        const w = carousel.clientWidth;
+        slides.forEach(s => s.style.width = `${w}px`);
+        update();
+      }
+      setSlideWidths();
+      window.addEventListener('resize', setSlideWidths);
     })();
   </script>
 </body>
