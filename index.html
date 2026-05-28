@@ -3,252 +3,231 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Foro Digital 2027 — 10ª edición (antes Get-CsLatam)</title>
-  <meta name="description" content="Foro Digital 2027 (antes Get-CsLatam). Décima edición: abierto a todas las soluciones. Contenido de valor para líderes, creadores y equipos." />
+  <title>Foro Digital 2027 — 10ª edición</title>
+  <meta name="description" content="Foro Digital 2027 — Décima edición. Evolucionamos desde Get-CsLatam: ahora un foro abierto a todas las soluciones de colaboración, comunicaciones y productividad impulsadas por IA." />
   <meta property="og:title" content="Foro Digital 2027 — 10ª edición" />
-  <meta property="og:description" content="Décima edición del evento que nació como Get-CsLatam. Ahora abierto a todas las soluciones." />
+  <meta property="og:description" content="Décima edición del evento que nació como Get-CsLatam. Ahora Foro Digital: abierto a todas las soluciones." />
   <meta property="og:image" content="/forodigital2027/assets/images/hero-bg.jpg" />
 
   <!-- Estilos -->
   <link rel="stylesheet" href="/forodigital2027/assets/css/style.css" />
 
-  <!-- AOS -->
+  <!-- AOS (animaciones al hacer scroll) -->
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 </head>
 <body>
 
-  <!-- NAV -->
-  <nav class="navbar" role="navigation" aria-label="Navegación principal">
-    <div class="nav-inner">
-      <a class="brand" href="#home" aria-label="Ir al inicio">
-        <span class="logo-wrap">
-          <img src="/forodigital2027/assets/images/logo.png" alt="Foro Digital 2027" class="logo-img" />
-        </span>
+  <!-- HEADER (blanco, minimalista) -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="#home" class="header-brand" aria-label="Inicio">
+        <!-- logo pequeño en header; logo grande está en hero -->
+        <img src="/forodigital2027/assets/images/logo.png" alt="Foro Digital" class="header-logo" />
       </a>
 
       <button id="nav-toggle" class="nav-toggle" aria-controls="nav-menu" aria-expanded="false" aria-label="Abrir menú">
         <span class="hamburger" aria-hidden="true"></span>
       </button>
 
-      <ul id="nav-menu" class="nav-menu" role="menubar" aria-label="Menú principal">
-        <li role="none"><a role="menuitem" href="#acerca">Acerca</a></li>
-        <li role="none"><a role="menuitem" href="#stats">Datos</a></li>
-        <li role="none"><a role="menuitem" href="#speakers">Speakers</a></li>
-        <li role="none"><a role="menuitem" href="#agenda">Agenda</a></li>
-        <li role="none"><a role="menuitem" href="#sponsors">Sponsors</a></li>
-        <li role="none"><a role="menuitem" href="#galeria">Galería</a></li>
-        <li role="none"><a role="menuitem" href="#keynote">Keynote</a></li>
-        <li role="none"><a role="menuitem" href="#registro" class="nav-cta">Registro</a></li>
-      </ul>
+      <nav id="nav-menu" class="nav-menu" role="navigation" aria-label="Menú principal">
+        <a href="#acerca">Acerca</a>
+        <a href="#stats">Datos</a>
+        <a href="#speakers">Speakers</a>
+        <a href="#agenda">Agenda</a>
+        <a href="#sponsors">Sponsors</a>
+        <a href="#galeria">Galería</a>
+        <a href="#registro" class="nav-cta">Registro</a>
+      </nav>
     </div>
-  </nav>
+  </header>
 
-  <!-- HERO
-       Por defecto el hero prioriza tipografía y contraste.
-       Si quieres activar la imagen de fondo añade la clase "hero--image" al header:
-       <header class="hero hero--image"> -->
-  <header id="home" class="hero" role="banner" aria-label="Hero principal">
+  <!-- HERO (TIPOGRAFÍA PROTAGONISTA) -->
+  <!-- Si quieres activar la imagen de fondo, cambia class="hero hero--text" por class="hero hero--image" -->
+  <section id="home" class="hero hero--text" aria-label="Hero principal">
+    <div class="hero-shapes" aria-hidden="true">
+      <!-- SVG shapes for subtle motion -->
+      <svg class="shape shape-1" viewBox="0 0 600 200" preserveAspectRatio="none" aria-hidden="true">
+        <defs><linearGradient id="g1" x1="0" x2="1"><stop offset="0" stop-color="#ff4ecb"/><stop offset="1" stop-color="#4ea8ff"/></linearGradient></defs>
+        <path d="M0,100 C150,200 450,0 600,100 L600 200 L0 200 Z" fill="url(#g1)" opacity="0.08"></path>
+      </svg>
+      <svg class="shape shape-2" viewBox="0 0 600 200" preserveAspectRatio="none" aria-hidden="true">
+        <path d="M0,120 C200,0 400,240 600,120 L600 200 L0 200 Z" fill="#ff4ecb" opacity="0.04"></path>
+      </svg>
+    </div>
+
     <div class="hero-inner" data-aos="fade-up">
-      <p class="hero-pretitle">Décima edición — Antes Get‑CsLatam</p>
+      <!-- Logo grande dentro del hero para protagonismo -->
+      <div class="hero-logo-wrap" aria-hidden="false">
+        <img src="/forodigital2027/assets/images/logo.png" alt="Foro Digital" class="hero-logo" />
+      </div>
 
-      <!-- Título grande y claro -->
-      <h1 class="hero-title">Foro Digital 2027</h1>
+      <p class="hero-pretitle">Décima edición</p>
 
-      <p class="hero-lead">
-        Evolucionamos: de Get‑CsLatam a Foro Digital. Con 10 años de experiencia abrimos el escenario a todas las soluciones de colaboración, comunicaciones unificadas y productividad impulsadas por IA.
+      <h1 class="hero-title">
+        Foro Digital <span class="title-gradient">2027</span>
+      </h1>
+
+      <p class="hero-sub">
+        Evolucionamos: dejamos atrás el nombre anterior y abrimos el foro a todas las soluciones de colaboración, comunicaciones unificadas y productividad impulsadas por IA. Diez años de experiencia, ahora con un escenario más amplio y práctico.
       </p>
 
       <ul class="hero-meta" aria-hidden="false">
         <li>📅 2027 · 2 días</li>
         <li>🎤 25+ speakers</li>
         <li>🔁 40+ sesiones</li>
-        <li>🤝 Sponsors y aliados</li>
+        <li>🤝 Sponsors</li>
       </ul>
 
       <div class="hero-ctas">
-        <a class="cta-primary" href="https://TU-PORTAL-DE-REGISTRO.com" target="_blank" rel="noopener">Ir al registro</a>
-        <a class="cta-ghost" href="#acerca">Más información</a>
+        <a class="btn btn-primary" href="https://TU-PORTAL-DE-REGISTRO.com" target="_blank" rel="noopener">Ir al registro</a>
+        <a class="btn btn-outline" href="#acerca">Conoce más</a>
       </div>
 
-      <p class="hero-note">
-        Contenido práctico, networking de alto valor y casos reales. Si antes nos conocías como Get‑CsLatam, ahora te invitamos a ser parte de la siguiente etapa: Foro Digital.
-      </p>
+      <p class="hero-note">Contenido práctico, networking de alto valor y casos reales. Únete a la comunidad que impulsa la transformación digital en Latinoamérica.</p>
     </div>
-  </header>
+  </section>
 
   <!-- MAIN -->
   <main>
 
-    <!-- ABOUT -->
+    <!-- ABOUT (reescrito y alineado) -->
     <section id="acerca" class="section" data-aos="fade-up">
-      <h2>Sobre el evento</h2>
+      <div class="container">
+        <h2>Qué ofrecemos ahora como Foro Digital</h2>
 
-      <p class="lead">
-        Get‑CsLatam Conference fue el punto de encuentro más relevante en Latinoamérica para profesionales que lideran la transformación digital con tecnologías Microsoft. En esa edición se exploraron tendencias en Comunicaciones Unificadas, Colaboración, Productividad, Inteligencia Artificial y Modern Workplace, de la mano de referentes del sector.
-      </p>
+        <div class="about-grid">
+          <div class="about-text">
+            <p class="lead">
+              Durante una década fuimos conocidos por reunir a la comunidad técnica y de comunicaciones bajo el nombre anterior. Hoy, como <strong>Foro Digital</strong>, ampliamos ese propósito: conectamos a profesionales, fabricantes y proveedores para compartir soluciones reales, casos aplicables y estrategias que impulsan resultados.
+            </p>
 
-      <p>
-        El evento reunió a expertos internacionales, Microsoft MVPs y representantes oficiales de Microsoft México y Microsoft Corp, quienes compartieron conocimientos prácticos, casos de éxito y estrategias que están redefiniendo la forma en que trabajamos.
-      </p>
+            <p>
+              Nuestro enfoque es práctico: sesiones con aprendizajes accionables, talleres con herramientas aplicables y espacios de networking que generan alianzas. Aquí encontrarás contenido útil para tomar decisiones y acelerar proyectos en tu organización.
+            </p>
 
-      <h3>¿Por qué participar?</h3>
-      <ul class="benefits">
-        <li><strong>Aprendizaje directo de líderes:</strong> contenido exclusivo impartido por especialistas reconocidos en el ecosistema.</li>
-        <li><strong>Networking de alto valor:</strong> conecta con profesionales de la región y genera alianzas estratégicas.</li>
-        <li><strong>Innovación aplicada:</strong> descubre soluciones y herramientas que transforman operaciones y experiencia de usuario.</li>
-        <li><strong>Desarrollo profesional:</strong> sesiones interactivas, talleres y paneles para aplicar lo aprendido.</li>
-      </ul>
+            <h3>Beneficios clave</h3>
+            <ul class="benefits">
+              <li><strong>Contenido práctico:</strong> sesiones y talleres con frameworks y casos reales.</li>
+              <li><strong>Conexiones estratégicas:</strong> networking con líderes, proveedores y partners.</li>
+              <li><strong>Soluciones diversas:</strong> demostraciones y debates sobre herramientas de múltiples fabricantes.</li>
+              <li><strong>Formación aplicada:</strong> mejora de habilidades con sesiones interactivas y paneles especializados.</li>
+            </ul>
+          </div>
 
-      <p class="lead-cta">
-        Participar te posiciona en la vanguardia tecnológica y fortalece tu perfil profesional. Forma parte de la comunidad más influyente de Latinoamérica y lleva tu conocimiento al siguiente nivel.
-      </p>
-
-      <p class="muted-note">
-        Nota: Get‑CsLatam nació hace 10 años. Para esta décima edición evolucionamos a <strong>Foro Digital</strong>, manteniendo la calidad técnica y la comunidad que nos respalda, y abriendo las puertas a todos los proveedores y fabricantes de soluciones.
-      </p>
+          <aside class="about-cta" aria-hidden="false">
+            <div class="card highlight">
+              <h4>¿Listo para participar?</h4>
+              <p>Asegura tu lugar y recibe actualizaciones sobre speakers, agenda y sesiones prácticas.</p>
+              <a class="btn btn-primary" href="https://TU-PORTAL-DE-REGISTRO.com" target="_blank" rel="noopener">Ir al registro</a>
+            </div>
+          </aside>
+        </div>
+      </div>
     </section>
 
     <!-- STATS -->
     <section id="stats" class="section section-stats" data-aos="fade-up">
-      <h2>Datos clave</h2>
-
-      <div class="stats-grid" role="list">
-        <div class="stat-card" role="listitem" data-aos="zoom-in">
-          <div class="stat-number">2</div>
-          <div class="stat-label">Días de contenido</div>
-        </div>
-
-        <div class="stat-card" role="listitem" data-aos="zoom-in" data-aos-delay="80">
-          <div class="stat-number">25+</div>
-          <div class="stat-label">Speakers</div>
-        </div>
-
-        <div class="stat-card" role="listitem" data-aos="zoom-in" data-aos-delay="160">
-          <div class="stat-number">40+</div>
-          <div class="stat-label">Sesiones</div>
-        </div>
-
-        <div class="stat-card" role="listitem" data-aos="zoom-in" data-aos-delay="240">
-          <div class="stat-number">10+</div>
-          <div class="stat-label">Sponsors</div>
-        </div>
-
-        <div class="stat-card" role="listitem" data-aos="zoom-in" data-aos-delay="320">
-          <div class="stat-number">Gratis</div>
-          <div class="stat-label">Costo</div>
+      <div class="container">
+        <h2>Datos clave</h2>
+        <div class="stats-grid">
+          <div class="stat-card"><div class="stat-number">2</div><div class="stat-label">Días</div></div>
+          <div class="stat-card"><div class="stat-number">25+</div><div class="stat-label">Speakers</div></div>
+          <div class="stat-card"><div class="stat-number">40+</div><div class="stat-label">Sesiones</div></div>
+          <div class="stat-card"><div class="stat-number">10+</div><div class="stat-label">Sponsors</div></div>
+          <div class="stat-card"><div class="stat-number">Gratis</div><div class="stat-label">Costo</div></div>
         </div>
       </div>
     </section>
 
     <!-- SPEAKERS -->
     <section id="speakers" class="section" data-aos="fade-up">
-      <h2>Speakers destacados</h2>
-      <p class="lead">Voces que comparten estrategia, tácticas y casos reales.</p>
+      <div class="container">
+        <h2>Speakers destacados</h2>
+        <p class="lead">Voces con experiencia práctica y casos aplicables.</p>
 
-      <div class="grid-3">
-        <article class="card speaker-card" data-aos="fade-up">
-          <div class="avatar">A</div>
-          <h3>Speaker 1</h3>
-          <p>Transformación digital y estrategia.</p>
-        </article>
-
-        <article class="card speaker-card" data-aos="fade-up" data-aos-delay="80">
-          <div class="avatar">B</div>
-          <h3>Speaker 2</h3>
-          <p>Experiencia de cliente y datos.</p>
-        </article>
-
-        <article class="card speaker-card" data-aos="fade-up" data-aos-delay="160">
-          <div class="avatar">C</div>
-          <h3>Speaker 3</h3>
-          <p>Innovación y cultura organizacional.</p>
-        </article>
+        <div class="grid-3">
+          <article class="card speaker-card"><div class="avatar">A</div><h3>Speaker 1</h3><p>Transformación digital y estrategia.</p></article>
+          <article class="card speaker-card"><div class="avatar">B</div><h3>Speaker 2</h3><p>Experiencia de cliente y datos.</p></article>
+          <article class="card speaker-card"><div class="avatar">C</div><h3>Speaker 3</h3><p>Innovación y cultura organizacional.</p></article>
+        </div>
       </div>
     </section>
 
     <!-- AGENDA -->
     <section id="agenda" class="section" data-aos="fade-up">
-      <h2>Agenda (resumen)</h2>
-      <p class="lead">Sesiones diseñadas para aprender y aplicar.</p>
-
-      <div class="agenda-grid">
-        <div class="card">
-          <h4>Apertura</h4>
-          <p>Panorama del ecosistema y tendencias clave.</p>
-        </div>
-        <div class="card">
-          <h4>Paneles</h4>
-          <p>Negocios, tecnología y personas: cómo alinear estrategia y ejecución.</p>
-        </div>
-        <div class="card">
-          <h4>Sesiones prácticas</h4>
-          <p>Herramientas, frameworks y casos aplicables.</p>
+      <div class="container">
+        <h2>Agenda (resumen)</h2>
+        <div class="agenda-grid">
+          <div class="card"><h4>Apertura</h4><p>Panorama y tendencias.</p></div>
+          <div class="card"><h4>Paneles</h4><p>Negocios, tecnología y personas.</p></div>
+          <div class="card"><h4>Sesiones prácticas</h4><p>Herramientas y casos aplicables.</p></div>
         </div>
       </div>
     </section>
 
     <!-- SPONSORS -->
     <section id="sponsors" class="section" data-aos="fade-up">
-      <h2>Sponsors y aliados</h2>
-      <p class="lead">Organizaciones que apoyan la comunidad y el contenido.</p>
-
-      <div class="grid-4 sponsors-grid">
-        <div class="card sponsor-card">Sponsor 1</div>
-        <div class="card sponsor-card">Sponsor 2</div>
-        <div class="card sponsor-card">Sponsor 3</div>
-        <div class="card sponsor-card">Sponsor 4</div>
+      <div class="container">
+        <h2>Sponsors y aliados</h2>
+        <div class="grid-4 sponsors-grid">
+          <div class="card sponsor-card">Sponsor 1</div>
+          <div class="card sponsor-card">Sponsor 2</div>
+          <div class="card sponsor-card">Sponsor 3</div>
+          <div class="card sponsor-card">Sponsor 4</div>
+        </div>
       </div>
     </section>
 
     <!-- KEYNOTE -->
     <section id="keynote" class="section" data-aos="fade-up">
-      <h2>Keynote Speaker</h2>
-
-      <div class="keynote-card card">
-        <img src="/forodigital2027/assets/images/keynote.jpg" alt="Keynote Speaker" class="keynote-img" />
-        <div class="keynote-body">
-          <h3>Nombre del Keynote</h3>
-          <p>Breve descripción del keynote y por qué su charla es imperdible. (Esta sección puede ocultarse cuando confirmes el speaker final.)</p>
+      <div class="container">
+        <h2>Keynote Speaker</h2>
+        <div class="keynote-card card">
+          <img src="/forodigital2027/assets/images/keynote.jpg" alt="Keynote Speaker" class="keynote-img" loading="lazy" />
+          <div class="keynote-body">
+            <h3>Nombre del Keynote</h3>
+            <p>Descripción breve del keynote. (Se puede ocultar cuando confirmes el speaker final.)</p>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- GALERÍA -->
+    <!-- GALERÍA (nombres corregidos) -->
     <section id="galeria" class="section" data-aos="fade-up">
-      <h2>Galería</h2>
-      <p class="lead">Momentos y experiencias de ediciones anteriores.</p>
+      <div class="container">
+        <h2>Galería</h2>
+        <p class="lead">Momentos y experiencias de ediciones anteriores.</p>
 
-      <div class="gallery-grid">
-        <div class="gallery-item"><img src="/forodigital2027/assets/images/gallery%20(1).jpg" alt="Foto 1" /></div>
-        <div class="gallery-item"><img src="/forodigital2027/assets/images/gallery%20(2)" alt="Foto 2" /></div>
-        <div class="gallery-item"><img src="/forodigital2027/assets/images/gallery%20(3)" alt="Foto 3" /></div>
-        <div class="gallery-item"><img src="/forodigital2027/assets/images/gallery%20(4)" alt="Foto 4" /></div>
-        <div class="gallery-item"><img src="/forodigital2027/assets/images/gallery%20(5)" alt="Foto 5" /></div>
-        <div class="gallery-item"><img src="/forodigital2027/assets/images/gallery%20(6)" alt="Foto 6" /></div>
+        <div class="gallery-grid">
+          <div class="gallery-item card"><img src="/forodigital2027/assets/images/gallery (1).JPG" alt="Galería 1" loading="lazy" /></div>
+          <div class="gallery-item card"><img src="/forodigital2027/assets/images/gallery (2).JPG" alt="Galería 2" loading="lazy" /></div>
+          <div class="gallery-item card"><img src="/forodigital2027/assets/images/gallery (3).JPG" alt="Galería 3" loading="lazy" /></div>
+          <div class="gallery-item card"><img src="/forodigital2027/assets/images/gallery (4).JPG" alt="Galería 4" loading="lazy" /></div>
+          <div class="gallery-item card"><img src="/forodigital2027/assets/images/gallery (5).JPG" alt="Galería 5" loading="lazy" /></div>
+          <div class="gallery-item card"><img src="/forodigital2027/assets/images/gallery (6).JPG" alt="Galería 6" loading="lazy" /></div>
+        </div>
       </div>
     </section>
 
     <!-- REGISTRO -->
     <section id="registro" class="section" data-aos="fade-up">
-      <h2>Registro</h2>
-      <p class="lead">Regístrate en el portal oficial para asegurar tu lugar.</p>
-
-      <div class="center">
-        <a class="cta-primary large" href="https://TU-PORTAL-DE-REGISTRO.com" target="_blank" rel="noopener">Ir al portal de registro</a>
+      <div class="container center">
+        <h2>Registro</h2>
+        <p class="lead">Regístrate en el portal oficial para asegurar tu lugar.</p>
+        <a class="btn btn-primary large" href="https://TU-PORTAL-DE-REGISTRO.com" target="_blank" rel="noopener">Ir al portal de registro</a>
       </div>
     </section>
 
   </main>
 
   <!-- FOOTER -->
-  <footer class="site-footer" role="contentinfo">
+  <footer class="site-footer">
     <div class="footer-inner">
       <div class="footer-grid">
         <div class="footer-col">
           <img src="/forodigital2027/assets/images/logo.png" alt="Foro Digital" class="footer-logo" />
-          <p>Foro Digital 2027 · Décima edición (antes Get‑CsLatam). Abierto a todas las soluciones.</p>
+          <p>Foro Digital 2027 · Décima edición. Abierto a todas las soluciones.</p>
         </div>
-
         <div class="footer-col">
           <h4>Enlaces</h4>
           <ul>
@@ -258,26 +237,22 @@
             <li><a href="#registro">Registro</a></li>
           </ul>
         </div>
-
         <div class="footer-col">
           <h4>Contacto</h4>
           <p>contacto@forodigital.com</p>
           <p class="muted">Síguenos en redes para actualizaciones.</p>
         </div>
       </div>
-
-      <div class="footer-bottom">
-        <p>© Foro Digital 2027 · Todos los derechos reservados.</p>
-      </div>
+      <div class="footer-bottom"><p>© Foro Digital 2027 · Todos los derechos reservados.</p></div>
     </div>
   </footer>
 
   <!-- Scripts -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script>
-    AOS.init({ duration: 900, once: true });
+    AOS.init({ duration: 800, once: true });
 
-    // Toggle menú hamburguesa
+    // Menú hamburguesa
     (function() {
       const btn = document.getElementById('nav-toggle');
       const menu = document.getElementById('nav-menu');
@@ -286,7 +261,6 @@
         btn.setAttribute('aria-expanded', !expanded);
         menu.classList.toggle('open');
       });
-      // Cerrar menú al hacer click en enlace (móvil)
       document.querySelectorAll('#nav-menu a').forEach(a => {
         a.addEventListener('click', () => {
           menu.classList.remove('open');
