@@ -12,7 +12,7 @@
   <!-- Estilos -->
   <link rel="stylesheet" href="/forodigital2027/assets/css/style.css" />
 
-  <!-- AOS (animaciones al hacer scroll) -->
+  <!-- AOS -->
   <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css" />
 </head>
 <body>
@@ -21,7 +21,9 @@
   <nav class="navbar" role="navigation" aria-label="Navegación principal">
     <div class="nav-inner">
       <a class="brand" href="#home" aria-label="Ir al inicio">
-        <img src="/forodigital2027/assets/images/logo.png" alt="Foro Digital 2027" class="logo-img" />
+        <span class="logo-wrap">
+          <img src="/forodigital2027/assets/images/logo.png" alt="Foro Digital 2027" class="logo-img" />
+        </span>
       </a>
 
       <button id="nav-toggle" class="nav-toggle" aria-controls="nav-menu" aria-expanded="false" aria-label="Abrir menú">
@@ -41,15 +43,19 @@
     </div>
   </nav>
 
-  <!-- HERO -->
-  <header id="home" class="hero hero-with-image" role="banner" aria-label="Hero principal">
-    <div class="hero-overlay" aria-hidden="true"></div>
-
+  <!-- HERO
+       Por defecto el hero prioriza tipografía y contraste.
+       Si quieres activar la imagen de fondo añade la clase "hero--image" al header:
+       <header class="hero hero--image"> -->
+  <header id="home" class="hero" role="banner" aria-label="Hero principal">
     <div class="hero-inner" data-aos="fade-up">
-      <p class="hero-pretitle">Décima edición — Antes Get-CsLatam</p>
-      <h1 class="hero-title gradient-text">Foro Digital 2027</h1>
+      <p class="hero-pretitle">Décima edición — Antes Get‑CsLatam</p>
+
+      <!-- Título grande y claro -->
+      <h1 class="hero-title">Foro Digital 2027</h1>
+
       <p class="hero-lead">
-        La evolución del evento que conociste como Get-CsLatam. Este año abrimos el escenario a todas las soluciones y comunidades: tecnología, negocios y personas.
+        Evolucionamos: de Get‑CsLatam a Foro Digital. Con 10 años de experiencia abrimos el escenario a todas las soluciones de colaboración, comunicaciones unificadas y productividad impulsadas por IA.
       </p>
 
       <ul class="hero-meta" aria-hidden="false">
@@ -65,7 +71,7 @@
       </div>
 
       <p class="hero-note">
-        Antes fuimos un evento centrado en Microsoft; ahora somos un foro abierto a todas las soluciones. Contenido práctico, networking y casos reales.
+        Contenido práctico, networking de alto valor y casos reales. Si antes nos conocías como Get‑CsLatam, ahora te invitamos a ser parte de la siguiente etapa: Foro Digital.
       </p>
     </div>
   </header>
@@ -73,12 +79,12 @@
   <!-- MAIN -->
   <main>
 
-    <!-- ABOUT (contenido histórico adaptado) -->
+    <!-- ABOUT -->
     <section id="acerca" class="section" data-aos="fade-up">
-      <h2>About Get-CsLatam 2026 - Conference and Expo</h2>
+      <h2>Sobre el evento</h2>
 
       <p class="lead">
-        Get-CsLatam Conference fue el punto de encuentro más relevante en Latinoamérica para profesionales que lideran la transformación digital con tecnologías Microsoft. Durante esa edición se exploraron las últimas tendencias en Comunicaciones Unificadas, Colaboración, Productividad, Inteligencia Artificial y Modern Workplace, de la mano de los principales referentes del sector.
+        Get‑CsLatam Conference fue el punto de encuentro más relevante en Latinoamérica para profesionales que lideran la transformación digital con tecnologías Microsoft. En esa edición se exploraron tendencias en Comunicaciones Unificadas, Colaboración, Productividad, Inteligencia Artificial y Modern Workplace, de la mano de referentes del sector.
       </p>
 
       <p>
@@ -87,18 +93,18 @@
 
       <h3>¿Por qué participar?</h3>
       <ul class="benefits">
-        <li><strong>Aprendizaje directo de líderes:</strong> Accede a contenido exclusivo impartido por especialistas reconocidos en el ecosistema Microsoft.</li>
-        <li><strong>Networking de alto valor:</strong> Conecta con profesionales de toda la región, genera alianzas y descubre nuevas oportunidades.</li>
-        <li><strong>Innovación aplicada:</strong> Conoce herramientas y soluciones que pueden transformar tu organización.</li>
-        <li><strong>Desarrollo profesional:</strong> Mejora tus habilidades en sesiones interactivas, talleres y paneles especializados.</li>
+        <li><strong>Aprendizaje directo de líderes:</strong> contenido exclusivo impartido por especialistas reconocidos en el ecosistema.</li>
+        <li><strong>Networking de alto valor:</strong> conecta con profesionales de la región y genera alianzas estratégicas.</li>
+        <li><strong>Innovación aplicada:</strong> descubre soluciones y herramientas que transforman operaciones y experiencia de usuario.</li>
+        <li><strong>Desarrollo profesional:</strong> sesiones interactivas, talleres y paneles para aplicar lo aprendido.</li>
       </ul>
 
       <p class="lead-cta">
-        Participar en Get-CsLatam Conference te posiciona en la vanguardia tecnológica, fortalece tu perfil profesional y abre nuevas puertas para tu crecimiento. Forma parte de la comunidad más influyente de Latinoamérica y lleva tu conocimiento al siguiente nivel.
+        Participar te posiciona en la vanguardia tecnológica y fortalece tu perfil profesional. Forma parte de la comunidad más influyente de Latinoamérica y lleva tu conocimiento al siguiente nivel.
       </p>
 
       <p class="muted-note">
-        Nota: Get-CsLatam nació hace 10 años. Para esta décima edición evolucionamos a <strong>Foro Digital</strong> para abrir el escenario a todas las soluciones y comunidades, manteniendo la calidad técnica y la comunidad que nos caracteriza.
+        Nota: Get‑CsLatam nació hace 10 años. Para esta décima edición evolucionamos a <strong>Foro Digital</strong>, manteniendo la calidad técnica y la comunidad que nos respalda, y abriendo las puertas a todos los proveedores y fabricantes de soluciones.
       </p>
     </section>
 
@@ -194,7 +200,7 @@
       </div>
     </section>
 
-    <!-- KEYNOTE (visible ahora, ocultable después) -->
+    <!-- KEYNOTE -->
     <section id="keynote" class="section" data-aos="fade-up">
       <h2>Keynote Speaker</h2>
 
@@ -212,17 +218,17 @@
       <h2>Galería</h2>
       <p class="lead">Momentos y experiencias de ediciones anteriores.</p>
 
-      <div class="grid-3 gallery-grid">
-        <div class="card gallery-item"><img src="/forodigital2027/assets/images/foto1.jpg" alt="Foto 1" /></div>
-        <div class="card gallery-item"><img src="/forodigital2027/assets/images/foto2.jpg" alt="Foto 2" /></div>
-        <div class="card gallery-item"><img src="/forodigital2027/assets/images/foto3.jpg" alt="Foto 3" /></div>
-        <div class="card gallery-item"><img src="/forodigital2027/assets/images/foto4.jpg" alt="Foto 4" /></div>
-        <div class="card gallery-item"><img src="/forodigital2027/assets/images/foto5.jpg" alt="Foto 5" /></div>
-        <div class="card gallery-item"><img src="/forodigital2027/assets/images/foto6.jpg" alt="Foto 6" /></div>
+      <div class="gallery-grid">
+        <div class="gallery-item"><img src="/forodigital2027/assets/images/gallery%20(1).jpg" alt="Foto 1" /></div>
+        <div class="gallery-item"><img src="/forodigital2027/assets/images/gallery%20(2)" alt="Foto 2" /></div>
+        <div class="gallery-item"><img src="/forodigital2027/assets/images/gallery%20(3)" alt="Foto 3" /></div>
+        <div class="gallery-item"><img src="/forodigital2027/assets/images/gallery%20(4)" alt="Foto 4" /></div>
+        <div class="gallery-item"><img src="/forodigital2027/assets/images/gallery%20(5)" alt="Foto 5" /></div>
+        <div class="gallery-item"><img src="/forodigital2027/assets/images/gallery%20(6)" alt="Foto 6" /></div>
       </div>
     </section>
 
-    <!-- REGISTRO (solo botón) -->
+    <!-- REGISTRO -->
     <section id="registro" class="section" data-aos="fade-up">
       <h2>Registro</h2>
       <p class="lead">Regístrate en el portal oficial para asegurar tu lugar.</p>
@@ -237,8 +243,32 @@
   <!-- FOOTER -->
   <footer class="site-footer" role="contentinfo">
     <div class="footer-inner">
-      <p>© Foro Digital 2027 · Décima edición (antes Get-CsLatam). Abierto a todas las soluciones.</p>
-      <p class="muted">Diseñado para inspirar, conectar y activar el futuro digital.</p>
+      <div class="footer-grid">
+        <div class="footer-col">
+          <img src="/forodigital2027/assets/images/logo.png" alt="Foro Digital" class="footer-logo" />
+          <p>Foro Digital 2027 · Décima edición (antes Get‑CsLatam). Abierto a todas las soluciones.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Enlaces</h4>
+          <ul>
+            <li><a href="#acerca">Acerca</a></li>
+            <li><a href="#speakers">Speakers</a></li>
+            <li><a href="#agenda">Agenda</a></li>
+            <li><a href="#registro">Registro</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <p>contacto@forodigital.com</p>
+          <p class="muted">Síguenos en redes para actualizaciones.</p>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© Foro Digital 2027 · Todos los derechos reservados.</p>
+      </div>
     </div>
   </footer>
 
