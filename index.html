@@ -23,6 +23,7 @@
         <a href="#stats">Datos</a>
         <a href="#keynote">Keynote</a>
         <a href="#speakers">Speakers</a>
+        <a href="#equipo">Equipo</a>
         <a href="#agenda">Agenda</a>
         <a href="#galeria">Galería</a>
         <a href="#registro" class="nav-cta">Registro</a>
@@ -36,17 +37,17 @@
 
     <div class="hero-shapes" aria-hidden="true">
       <svg class="shape s1" viewBox="0 0 800 200" preserveAspectRatio="none" aria-hidden="true">
-        <defs><linearGradient id="hg1" x1="0" x2="1"><stop offset="0" stop-color="#ff4ecb"/><stop offset="1" stop-color="#4ea8ff"/></linearGradient></defs>
+        <defs><linearGradient id="hg1" x1="0" x2="1"><stop offset="0" stop-color="var(--brand-primary)"/><stop offset="1" stop-color="var(--brand-secondary)"/></linearGradient></defs>
         <path d="M0,80 C160,200 640,0 800,80 L800 200 L0 200 Z" fill="url(#hg1)" opacity="0.08"></path>
       </svg>
       <svg class="shape s2" viewBox="0 0 800 200" preserveAspectRatio="none" aria-hidden="true">
-        <path d="M0,120 C200,0 600,240 800,120 L800 200 L0 200 Z" fill="#4ea8ff" opacity="0.04"></path>
+        <path d="M0,120 C200,0 600,240 800,120 L800 200 L0 200 Z" fill="var(--brand-secondary)" opacity="0.04"></path>
       </svg>
     </div>
 
     <div class="hero-inner" data-aos="fade-up">
       <div class="hero-logo-wrap" aria-hidden="false">
-        <img src="/forodigital2027/assets/images/logo.png" alt="Foro Digital" class="hero-logo" />
+        <img id="site-logo" src="/forodigital2027/assets/images/logo.png" alt="Foro Digital" class="hero-logo" />
       </div>
 
       <p class="hero-pretitle">Décima edición</p>
@@ -77,7 +78,7 @@
 
   <main>
 
-    <!-- ABOUT (tu bloque exacto adaptado) -->
+    <!-- ABOUT -->
     <section id="about" class="section about-section" data-aos="fade-up">
       <div class="container about-wrap">
         <div class="about-content">
@@ -151,7 +152,7 @@
       </div>
     </section>
 
-    <!-- DATOS CLAVE (más foco e impacto) -->
+    <!-- DATOS CLAVE -->
     <section id="stats" class="section section-stats" data-aos="fade-up">
       <div class="container">
         <div class="stats-hero">
@@ -169,7 +170,7 @@
       </div>
     </section>
 
-    <!-- KEYNOTE (más grande e impactante) -->
+    <!-- KEYNOTE (más grande) -->
     <section id="keynote" class="section" data-aos="fade-up">
       <div class="container">
         <h2>Keynote Speaker</h2>
@@ -190,7 +191,7 @@
       </div>
     </section>
 
-    <!-- SPEAKERS (por definir + CTA) -->
+    <!-- SPEAKERS -->
     <section id="speakers" class="section" data-aos="fade-up">
       <div class="container">
         <h2>Speakers</h2>
@@ -204,41 +205,69 @@
           </div>
         </div>
 
-        <!-- Plantilla comentada: 9 slots para cuando quieras activar -->
+        <!-- Plantilla comentada: 9 slots -->
         <!--
         <div class="grid-3" aria-hidden="true">
           <article class="card speaker-card"><div class="avatar">01</div><h3>Speaker 1</h3><p>Bio breve.</p></article>
-          <article class="card speaker-card"><div class="avatar">02</div><h3>Speaker 2</h3><p>Bio breve.</p></article>
-          <article class="card speaker-card"><div class="avatar">03</div><h3>Speaker 3</h3><p>Bio breve.</p></article>
-          <article class="card speaker-card"><div class="avatar">04</div><h3>Speaker 4</h3><p>Bio breve.</p></article>
-          <article class="card speaker-card"><div class="avatar">05</div><h3>Speaker 5</h3><p>Bio breve.</p></article>
-          <article class="card speaker-card"><div class="avatar">06</div><h3>Speaker 6</h3><p>Bio breve.</p></article>
-          <article class="card speaker-card"><div class="avatar">07</div><h3>Speaker 7</h3><p>Bio breve.</p></article>
-          <article class="card speaker-card"><div class="avatar">08</div><h3>Speaker 8</h3><p>Bio breve.</p></article>
-          <article class="card speaker-card"><div class="avatar">09</div><h3>Speaker 9</h3><p>Bio breve.</p></article>
+          ...
         </div>
         -->
-
       </div>
     </section>
 
-    <!-- EQUIPO (nuevo) -->
+    <!-- EQUIPO (detallado con bios) -->
     <section id="equipo" class="section" data-aos="fade-up">
       <div class="container">
         <h2>El equipo detrás</h2>
         <p class="lead">Personas que organizan y hacen posible Foro Digital.</p>
 
-        <div class="grid-3">
-          <div class="card"><div class="avatar">R</div><h3>Nombre 1</h3><p>Rol / Organización</p></div>
-          <div class="card"><div class="avatar">A</div><h3>Nombre 2</h3><p>Rol / Organización</p></div>
-          <div class="card"><div class="avatar">M</div><h3>Nombre 3</h3><p>Rol / Organización</p></div>
+        <div class="team-grid">
+          <article class="team-card">
+            <div class="team-media">
+              <img src="/forodigital2027/assets/images/rodolfo.jpg" alt="Rodolfo Castro Aguilar" loading="lazy">
+            </div>
+            <div class="team-body">
+              <h3>Rodolfo Castro Aguilar</h3>
+              <p class="team-role"><strong>Microsoft MVP | UC All Star | MGCI Board Officer</strong></p>
+              <p>
+                Más de 15 años de experiencia en Comunicaciones Unificadas con proyectos en Latinoamérica, Norteamérica y Europa.
+                Reconocido Microsoft MVP por 11 años en M365 Apps and Services y nombrado UC All Star en 2024. Fundador de Get‑CsLatam y speaker habitual en eventos como CommsVNext y Microsoft Ignite.
+              </p>
+            </div>
+          </article>
+
+          <article class="team-card">
+            <div class="team-media">
+              <img src="/forodigital2027/assets/images/laura.jpg" alt="Laura Sánchez" loading="lazy">
+            </div>
+            <div class="team-body">
+              <h3>Laura Sánchez</h3>
+              <p class="team-role"><strong>Coordinadora académica / Educadora tecnológica</strong></p>
+              <p>
+                Profesional con experiencia en educación y tecnología, creadora de contenidos educativos y reconocida por su contribución al uso de tecnología en educación.
+                Ganadora de premios como Techfluencer y reconocida por su trabajo en comunidades tecnológicas.
+              </p>
+            </div>
+          </article>
+
+          <article class="team-card">
+            <div class="team-media">
+              <img src="/forodigital2027/assets/images/andres.jpg" alt="Andrés Gorzelany" loading="lazy">
+            </div>
+            <div class="team-body">
+              <h3>Ing. Andrés Gorzelany</h3>
+              <p class="team-role"><strong>Senior Modern Workplace Consultant | Microsoft MVP</strong></p>
+              <p>
+                Experto en Modern Workplace, autor y administrador de recursos técnicos. Fue Technical Writer de documentación oficial de Teams, Exchange y SharePoint, y lidera comunidades técnicas en español.
+              </p>
+            </div>
+          </article>
         </div>
 
         <!-- plantilla comentada para más miembros -->
         <!--
-        <div class="grid-3" aria-hidden="true">
-          <div class="card"><div class="avatar">4</div><h3>Nombre 4</h3><p>Rol</p></div>
-          ...
+        <div class="team-grid" aria-hidden="true">
+          <article class="team-card">...</article>
         </div>
         -->
       </div>
@@ -270,7 +299,7 @@
           </div>
         </div>
 
-        <!-- Plantilla comentada: 10 slots para sponsors -->
+        <!-- Plantilla comentada: 10 slots -->
         <!--
         <div class="grid-4 sponsors-grid" aria-hidden="true">
           <div class="card sponsor-card">Sponsor 1</div>
@@ -338,6 +367,8 @@
   </footer>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <!-- Script: extrae color del logo y actualiza variables CSS -->
   <script>
     AOS.init({ duration: 800, once: true });
 
@@ -356,6 +387,123 @@
           btn.setAttribute('aria-expanded', 'false');
         });
       });
+    })();
+
+    // Color branding: extrae color predominante del logo y actualiza :root
+    (function() {
+      const logoPath = '/forodigital2027/assets/images/logo.png'; // Cambia si tu logo tiene otro nombre/ruta
+      const fallbackPrimary = '#ff4ecb';
+      const fallbackSecondary = '#4ea8ff';
+
+      function rgbToHsl(r,g,b){
+        r/=255; g/=255; b/=255;
+        const max=Math.max(r,g,b), min=Math.min(r,g,b);
+        let h,s,l=(max+min)/2;
+        if(max===min){h=s=0;} else {
+          const d=max-min;
+          s = l>0.5 ? d/(2-max-min) : d/(max+min);
+          switch(max){
+            case r: h=(g-b)/d + (g<b?6:0); break;
+            case g: h=(b-r)/d + 2; break;
+            case b: h=(r-g)/d + 4; break;
+          }
+          h/=6;
+        }
+        return [h*360, s, l];
+      }
+      function hslToRgb(h,s,l){
+        h/=360;
+        let r,g,b;
+        if(s===0){ r=g=b=l; }
+        else {
+          const hue2rgb = (p,q,t) => {
+            if(t<0) t+=1;
+            if(t>1) t-=1;
+            if(t<1/6) return p + (q-p)*6*t;
+            if(t<1/2) return q;
+            if(t<2/3) return p + (q-p)*(2/3 - t)*6;
+            return p;
+          };
+          const q = l<0.5 ? l*(1+s) : l+s - l*s;
+          const p = 2*l - q;
+          r = hue2rgb(p,q,h+1/3);
+          g = hue2rgb(p,q,h);
+          b = hue2rgb(p,q,h-1/3);
+        }
+        return [Math.round(r*255), Math.round(g*255), Math.round(b*255)];
+      }
+
+      function setBrandColors(primaryRgb){
+        const [r,g,b] = primaryRgb;
+        const [h,s,l] = rgbToHsl(r,g,b);
+        // Secondary: desplazar matiz +30 grados, ajustar saturación y ligereza para contraste
+        const secH = (h + 30) % 360;
+        const secS = Math.min(1, s * 0.9 + 0.05);
+        const secL = Math.max(0.25, Math.min(0.65, l * 0.9 + 0.05));
+        const secRgb = hslToRgb(secH, secS, secL);
+        const primaryHex = rgbToHex(r,g,b);
+        const secondaryHex = rgbToHex(secRgb[0], secRgb[1], secRgb[2]);
+
+        document.documentElement.style.setProperty('--brand-primary', primaryHex);
+        document.documentElement.style.setProperty('--brand-secondary', secondaryHex);
+        // Also set derived variables for gradients used elsewhere
+        document.documentElement.style.setProperty('--rosa', primaryHex);
+        document.documentElement.style.setProperty('--azul', secondaryHex);
+      }
+
+      function rgbToHex(r,g,b){
+        return '#' + [r,g,b].map(x => x.toString(16).padStart(2,'0')).join('');
+      }
+
+      // Cargar imagen y muestrear
+      const img = new Image();
+      img.crossOrigin = 'anonymous';
+      img.src = logoPath + '?_=' + Date.now();
+      img.onload = () => {
+        try {
+          const canvas = document.createElement('canvas');
+          const ctx = canvas.getContext('2d');
+          // reducir tamaño para performance
+          const w = Math.min(120, img.width);
+          const h = Math.min(120, img.height);
+          canvas.width = w;
+          canvas.height = h;
+          ctx.drawImage(img, 0, 0, w, h);
+          const data = ctx.getImageData(0,0,w,h).data;
+          let r=0,g=0,b=0,count=0;
+          for(let i=0;i<data.length;i+=4){
+            const alpha = data[i+3];
+            if(alpha < 128) continue; // ignorar transparencias
+            const rr = data[i], gg = data[i+1], bb = data[i+2];
+            // ignorar píxeles casi blancos o casi negros para evitar sesgo
+            const brightness = (rr+gg+bb)/3;
+            if(brightness > 245 || brightness < 10) continue;
+            r += rr; g += gg; b += bb; count++;
+          }
+          if(count === 0){
+            // fallback: usar centro del logo
+            const mid = ctx.getImageData(Math.floor(w/2), Math.floor(h/2), 1,1).data;
+            setBrandColors([mid[0], mid[1], mid[2]]);
+          } else {
+            setBrandColors([Math.round(r/count), Math.round(g/count), Math.round(b/count)]);
+          }
+        } catch(e){
+          // fallback
+          document.documentElement.style.setProperty('--brand-primary', fallbackPrimary);
+          document.documentElement.style.setProperty('--brand-secondary', fallbackSecondary);
+          document.documentElement.style.setProperty('--rosa', fallbackPrimary);
+          document.documentElement.style.setProperty('--azul', fallbackSecondary);
+          console.warn('No se pudo extraer color del logo, usando fallback.', e);
+        }
+      };
+      img.onerror = () => {
+        // fallback
+        document.documentElement.style.setProperty('--brand-primary', fallbackPrimary);
+        document.documentElement.style.setProperty('--brand-secondary', fallbackSecondary);
+        document.documentElement.style.setProperty('--rosa', fallbackPrimary);
+        document.documentElement.style.setProperty('--azul', fallbackSecondary);
+        console.warn('No se pudo cargar logo para extracción de color. Asegura /assets/images/logo.png');
+      };
     })();
   </script>
 </body>
