@@ -1,5 +1,5 @@
 /* ===========================
-   PALETA Y VARIABLES
+   VARIABLES DE MARCA
    =========================== */
 :root{
   --rosa: #ff4ecb;
@@ -7,10 +7,10 @@
   --blanco: #ffffff;
   --negro: #0d0d0d;
   --gris: #f6f7fb;
-  --card-shadow: 0 8px 24px rgba(13,13,13,0.08);
+  --card-shadow: 0 10px 30px rgba(13,13,13,0.08);
   --radius: 14px;
   --max-width: 1200px;
-  --font-main: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+  --font-main: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
 }
 
 /* RESET */
@@ -21,197 +21,106 @@ body{
   background:var(--gris);
   color:var(--negro);
   -webkit-font-smoothing:antialiased;
-  -moz-osx-font-smoothing:grayscale;
   line-height:1.5;
 }
 
-/* NAVBAR */
-.navbar{
-  position:fixed;top:0;left:0;right:0;
-  z-index:1200;
-  background:linear-gradient(180deg, rgba(13,13,13,0.78), rgba(13,13,13,0.68));
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid rgba(255,255,255,0.03);
-}
-.nav-inner{
-  max-width:var(--max-width);
-  margin:0 auto;
-  padding:12px 20px;
-  display:flex;
-  align-items:center;
-  gap:16px;
-  justify-content:space-between;
-}
-.brand{display:flex;align-items:center;text-decoration:none}
-
-/* Logo con fondo claro para visibilidad */
-.logo-wrap{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
+/* ===========================
+   HEADER (blanco, minimalista)
+   =========================== */
+.site-header{
+  position:fixed;top:0;left:0;right:0;z-index:1200;
   background:var(--blanco);
-  padding:6px 10px;
-  border-radius:10px;
-  box-shadow:0 6px 18px rgba(13,13,13,0.12);
+  border-bottom:1px solid rgba(13,13,13,0.06);
+  box-shadow: 0 6px 18px rgba(13,13,13,0.03);
 }
-.logo-img{height:42px;width:auto;display:block}
+.header-inner{
+  max-width:var(--max-width);margin:0 auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;
+}
+.header-logo{height:36px;width:auto;display:block}
 
-/* menu desktop */
-.nav-menu{
-  list-style:none;
-  display:flex;
-  gap:18px;
-  align-items:center;
-}
-.nav-menu a{
-  color:var(--blanco);
-  text-decoration:none;
-  font-weight:600;
-  font-size:0.95rem;
-  padding:8px 10px;
-  border-radius:8px;
-}
+/* nav */
+.nav-menu{display:flex;gap:18px;align-items:center}
+.nav-menu a{color:var(--negro);text-decoration:none;font-weight:600;padding:8px 10px;border-radius:8px}
 .nav-menu a:hover{color:var(--rosa)}
-.nav-cta{
-  background:linear-gradient(90deg,var(--rosa),var(--azul));
-  color:var(--negro);
-  padding:8px 14px;
-  border-radius:999px;
-  font-weight:800;
-}
+.nav-cta{background:linear-gradient(90deg,var(--rosa),var(--azul));color:var(--negro);padding:8px 14px;border-radius:999px;font-weight:800}
 
-/* hamburger (mobile) */
-.nav-toggle{
-  display:none;
-  background:transparent;border:0;padding:8px;border-radius:8px;cursor:pointer;
-}
-.hamburger, .hamburger::before, .hamburger::after{
-  display:block;width:22px;height:2px;background:var(--blanco);border-radius:2px;position:relative;
-}
-.hamburger::before, .hamburger::after{
-  content:"";position:absolute;left:0;
-}
+/* hamburger */
+.nav-toggle{display:none;background:transparent;border:0;padding:8px;cursor:pointer}
+.hamburger, .hamburger::before, .hamburger::after{display:block;width:22px;height:2px;background:var(--negro);border-radius:2px;position:relative}
+.hamburger::before,.hamburger::after{content:"";position:absolute;left:0}
 .hamburger::before{top:-7px}
 .hamburger::after{top:7px}
 
-/* HERO - Prioridad tipografía */
-.hero{
-  min-height:78vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:110px 20px 60px;
-  position:relative;
-  overflow:hidden;
-  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.02));
-}
+/* ===========================
+   HERO (TIPOGRAFÍA PROTAGONISTA)
+   =========================== */
+.hero{min-height:78vh;display:flex;align-items:center;justify-content:center;padding:110px 20px 60px;position:relative;overflow:hidden}
+.hero-shapes{position:absolute;inset:0;pointer-events:none;z-index:0}
+.shape{position:absolute;left:0;right:0;top:0;width:100%;height:220px;transform:translateY(-10%);animation:float 12s ease-in-out infinite}
+.shape-2{top:auto;bottom:-20px;transform:translateY(10%);opacity:0.6}
+@keyframes float{0%{transform:translateY(-6%)}50%{transform:translateY(6%)}100%{transform:translateY(-6%)}}
 
-/* Si quieres imagen de fondo, añade la clase hero--image al header.
-   La clase hero--image está aquí para que puedas activarla sin tocar CSS adicional. */
-.hero--image{
-  background: url("/forodigital2027/assets/images/hero-bg.jpg") center/cover no-repeat;
-}
-.hero--image::before{
-  content:"";
-  position:absolute;inset:0;
-  background:
-    linear-gradient(180deg, rgba(6,6,6,0.45), rgba(6,6,6,0.45)),
-    linear-gradient(120deg, rgba(255,78,203,0.18), rgba(78,168,255,0.18));
-  z-index:1;
-}
-
-/* Hero inner */
+/* hero inner card (por defecto caja clara para máxima legibilidad) */
 .hero-inner{
-  max-width:980px;
-  text-align:center;
-  color:var(--negro);
-  position:relative;
-  z-index:2;
-  padding:36px;
-  border-radius:12px;
-  background: linear-gradient(180deg, rgba(255,255,255,0.98), rgba(255,255,255,0.95));
-  box-shadow: 0 18px 40px rgba(13,13,13,0.06);
+  max-width:980px;text-align:center;position:relative;z-index:2;padding:36px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.98),rgba(255,255,255,0.95));box-shadow:var(--card-shadow);
 }
 
-/* Si la imagen está activa, invertimos colores para legibilidad */
-.hero--image .hero-inner{
-  background: transparent;
-  color: var(--blanco);
-  box-shadow: none;
-}
+/* hero--image (opcional): si activas esta clase en el HTML, el CSS invierte colores */
+.hero--image{background:url("/forodigital2027/assets/images/hero-bg.jpg") center/cover no-repeat}
+.hero--image .hero-inner{background:transparent;color:var(--blanco);box-shadow:none}
+.hero--image .hero-pretitle{color:rgba(255,255,255,0.9)}
 
-/* Texto principal grande y claro */
-.hero-pretitle{
-  text-transform:uppercase;
-  letter-spacing:0.18em;
-  font-weight:700;
-  opacity:0.9;
-  font-size:0.85rem;
-  color: var(--rosa);
-}
-.hero-title{
-  font-size:3.6rem;
-  margin:12px 0;
-  line-height:1.02;
-  font-weight:900;
-  color: inherit;
-  letter-spacing: -0.02em;
-}
-.hero--image .hero-title{
-  background: linear-gradient(90deg,var(--rosa),var(--azul));
-  -webkit-background-clip:text;
-  -webkit-text-fill-color:transparent;
-  text-shadow: 0 10px 30px rgba(0,0,0,0.45);
-}
-.hero-lead{
-  font-size:1.05rem;
-  margin-top:12px;
-  color:inherit;
-  opacity:0.95;
-}
+/* logo grande en hero */
+.hero-logo-wrap{display:flex;justify-content:center;margin-bottom:8px}
+.hero-logo{height:84px;width:auto;display:block}
+
+/* tipografía hero */
+.hero-pretitle{text-transform:uppercase;letter-spacing:0.18em;font-weight:700;color:var(--rosa);font-size:0.9rem}
+.hero-title{font-size:3.8rem;line-height:1.02;font-weight:900;color:var(--negro);margin:8px 0}
+.title-gradient{background:linear-gradient(90deg,var(--rosa),var(--azul));-webkit-background-clip:text;-webkit-text-fill-color:transparent;display:inline-block;animation:gradientShift 6s linear infinite}
+@keyframes gradientShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+.hero-sub{margin-top:14px;font-size:1.05rem;color:rgba(0,0,0,0.8)}
+
+/* cuando hero tiene imagen, el título usa degradado y sombra */
+.hero--image .hero-title{color:transparent;background:linear-gradient(90deg,var(--rosa),var(--azul));-webkit-background-clip:text;-webkit-text-fill-color:transparent;text-shadow:0 10px 30px rgba(0,0,0,0.45)}
 
 /* meta y CTAs */
 .hero-meta{display:flex;gap:12px;justify-content:center;margin-top:18px;flex-wrap:wrap}
-.hero-meta li{list-style:none;background:rgba(0,0,0,0.04);padding:6px 12px;border-radius:999px;font-weight:700;color:var(--negro)}
+.hero-meta li{list-style:none;background:rgba(13,13,13,0.06);padding:6px 12px;border-radius:999px;font-weight:700;color:var(--negro)}
 .hero--image .hero-meta li{background:rgba(255,255,255,0.08);color:var(--white)}
 
 .hero-ctas{margin-top:22px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
-.cta-primary{
-  background:linear-gradient(90deg,var(--rosa),var(--azul));
-  color:var(--negro);
-  padding:12px 22px;border-radius:999px;font-weight:800;text-decoration:none;
-  box-shadow:0 12px 30px rgba(78,168,255,0.12);
-}
-.cta-primary:hover{transform:translateY(-4px)}
-.cta-ghost{
-  background:transparent;color:var(--negro);padding:12px 18px;border-radius:999px;border:1px solid rgba(13,13,13,0.06);text-decoration:none;font-weight:700;
-}
-.hero--image .cta-ghost{color:var(--blanco);border-color:rgba(255,255,255,0.12)}
+.btn{display:inline-block;text-decoration:none;border-radius:999px;padding:12px 20px;font-weight:800;transition:transform .22s ease,box-shadow .22s ease}
+.btn-primary{background:linear-gradient(90deg,var(--rosa),var(--azul));color:var(--negro);box-shadow:0 12px 30px rgba(78,168,255,0.12)}
+.btn-primary:hover{transform:translateY(-4px)}
+.btn-outline{background:transparent;border:1px solid rgba(13,13,13,0.06);color:var(--negro)}
+.btn.large{padding:16px 28px;font-size:1.05rem}
 
 /* nota */
-.hero-note{margin-top:14px;font-size:0.9rem;color:rgba(0,0,0,0.7)}
-.hero--image .hero-note{color:rgba(255,255,255,0.9)}
+.hero-note{margin-top:14px;font-size:0.95rem;color:rgba(0,0,0,0.65)}
 
-/* SECCIONES */
-.section{padding:80px 20px;max-width:var(--max-width);margin:0 auto}
-.section h2{font-size:2rem;margin-bottom:12px;display:block;text-align:center;
-  background:linear-gradient(90deg,var(--rosa),var(--azul));
-  -webkit-background-clip:text;-webkit-text-fill-color:transparent;
-}
-.lead{max-width:820px;margin:0 auto 28px;text-align:center;color:#222}
-.lead-cta{max-width:820px;margin:18px auto 28px;text-align:center;font-weight:700}
-.muted-note{max-width:820px;margin:12px auto 0;text-align:center;color:#555}
+/* ===========================
+   SECCIONES Y LAYOUT
+   =========================== */
+.section{padding:80px 20px}
+.container{max-width:var(--max-width);margin:0 auto}
+.section h2{font-size:2rem;text-align:center;margin-bottom:18px;background:linear-gradient(90deg,var(--rosa),var(--azul));-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.lead{max-width:820px;margin:0 auto 20px;text-align:center;color:#222}
+
+/* ABOUT layout */
+.about-grid{display:grid;grid-template-columns:2fr 1fr;gap:28px;align-items:start}
+.about-text{padding-right:6px}
+.about-cta .highlight{padding:18px;border-radius:12px;background:linear-gradient(180deg,#fff,#fff);box-shadow:var(--card-shadow);text-align:center}
 
 /* GRIDS */
 .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
 .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
-.card{background:var(--blanco);padding:18px;border-radius:var(--radius);box-shadow:var(--card-shadow);transition:transform .28s ease,box-shadow .28s ease}
+.card{background:var(--blanco);padding:18px;border-radius:var(--radius);box-shadow:var(--card-shadow);transition:transform .28s ease}
 .card:hover{transform:translateY(-8px);box-shadow:0 18px 40px rgba(13,13,13,0.12)}
 
 /* SPEAKERS */
 .speaker-card{text-align:center}
-.avatar{width:64px;height:64px;border-radius:50%;margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--blanco);
-  background:linear-gradient(135deg,var(--rosa),var(--azul));font-size:1.2rem}
+.avatar{width:64px;height:64px;border-radius:50%;margin:0 auto 12px;display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--blanco);background:linear-gradient(135deg,var(--rosa),var(--azul));font-size:1.2rem}
 
 /* AGENDA */
 .agenda-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
@@ -234,10 +143,6 @@ body{
 .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
 .gallery-item img{width:100%;height:220px;object-fit:cover;border-radius:10px;display:block}
 
-/* FORM / REGISTRO */
-.center{text-align:center}
-.cta-primary.large{padding:16px 28px;font-size:1.05rem}
-
 /* FOOTER */
 .site-footer{background:#0d0d0d;color:var(--blanco);padding:40px 20px;margin-top:40px}
 .footer-inner{max-width:var(--max-width);margin:0 auto}
@@ -248,28 +153,30 @@ body{
 .footer-col a{color:rgba(255,255,255,0.9);text-decoration:none}
 .footer-bottom{text-align:center;margin-top:18px;color:rgba(255,255,255,0.7)}
 
-/* BENEFITS LIST */
-.benefits{max-width:820px;margin:12px auto 18px;list-style:disc;padding-left:20px;color:#222}
+/* BENEFITS */
+.benefits{list-style:disc;padding-left:20px;color:#222}
 .benefits li{margin:8px 0}
 
-/* RESPONSIVE */
+/* ===========================
+   RESPONSIVE
+   =========================== */
 @media (max-width:1100px){
+  .about-grid{grid-template-columns:1fr}
   .grid-3{grid-template-columns:repeat(2,1fr)}
   .agenda-grid{grid-template-columns:repeat(2,1fr)}
   .stats-grid{grid-template-columns:repeat(3,1fr)}
   .footer-grid{grid-template-columns:1fr 1fr}
 }
 @media (max-width:760px){
-  .nav-menu{display:none;position:fixed;top:72px;right:16px;background:linear-gradient(180deg,rgba(13,13,13,0.98),rgba(13,13,13,0.95));padding:18px;border-radius:12px;flex-direction:column;gap:12px;min-width:200px;box-shadow:0 18px 40px rgba(0,0,0,0.4)}
+  .nav-menu{display:none;position:fixed;top:72px;right:16px;background:var(--blanco);padding:18px;border-radius:12px;flex-direction:column;gap:12px;min-width:200px;box-shadow:0 18px 40px rgba(0,0,0,0.08)}
   .nav-menu.open{display:flex}
   .nav-toggle{display:block}
-  .hero-title{font-size:2.2rem}
   .hero-inner{padding:20px}
+  .hero-title{font-size:2.2rem}
   .grid-3{grid-template-columns:1fr}
   .grid-4{grid-template-columns:1fr 1fr}
   .stats-grid{grid-template-columns:repeat(2,1fr)}
-  .keynote-card{flex-direction:column;align-items:flex-start}
-  .keynote-img{width:100%;height:auto}
+  .gallery-grid{grid-template-columns:repeat(2,1fr)}
   .gallery-item img{height:160px}
   .footer-grid{grid-template-columns:1fr}
 }
