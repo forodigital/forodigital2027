@@ -25,28 +25,24 @@ body{
 }
 
 /* ===========================
-   HEADER (blanco, minimalista)
+   HEADER (NEGRO, SIN LOGO)
    =========================== */
-.site-header{
+.site-header--dark{
   position:fixed;top:0;left:0;right:0;z-index:1200;
-  background:var(--blanco);
-  border-bottom:1px solid rgba(13,13,13,0.06);
-  box-shadow: 0 6px 18px rgba(13,13,13,0.03);
+  background:#0b0b0b;color:var(--blanco);
+  border-bottom:1px solid rgba(255,255,255,0.03);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
 }
-.header-inner{
-  max-width:var(--max-width);margin:0 auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;
-}
-.header-logo{height:36px;width:auto;display:block}
-
-/* nav */
+.header-inner{max-width:var(--max-width);margin:0 auto;padding:12px 20px;display:flex;align-items:center;justify-content:flex-end;gap:12px}
+.top-nav{display:flex;align-items:center;gap:12px}
 .nav-menu{display:flex;gap:18px;align-items:center}
-.nav-menu a{color:var(--negro);text-decoration:none;font-weight:600;padding:8px 10px;border-radius:8px}
+.nav-menu a{color:rgba(255,255,255,0.92);text-decoration:none;font-weight:600;padding:8px 10px;border-radius:8px}
 .nav-menu a:hover{color:var(--rosa)}
 .nav-cta{background:linear-gradient(90deg,var(--rosa),var(--azul));color:var(--negro);padding:8px 14px;border-radius:999px;font-weight:800}
 
 /* hamburger */
 .nav-toggle{display:none;background:transparent;border:0;padding:8px;cursor:pointer}
-.hamburger, .hamburger::before, .hamburger::after{display:block;width:22px;height:2px;background:var(--negro);border-radius:2px;position:relative}
+.hamburger, .hamburger::before, .hamburger::after{display:block;width:22px;height:2px;background:var(--blanco);border-radius:2px;position:relative}
 .hamburger::before,.hamburger::after{content:"";position:absolute;left:0}
 .hamburger::before{top:-7px}
 .hamburger::after{top:7px}
@@ -55,48 +51,34 @@ body{
    HERO (TIPOGRAFÍA PROTAGONISTA)
    =========================== */
 .hero{min-height:78vh;display:flex;align-items:center;justify-content:center;padding:110px 20px 60px;position:relative;overflow:hidden}
-.hero-shapes{position:absolute;inset:0;pointer-events:none;z-index:0}
-.shape{position:absolute;left:0;right:0;top:0;width:100%;height:220px;transform:translateY(-10%);animation:float 12s ease-in-out infinite}
-.shape-2{top:auto;bottom:-20px;transform:translateY(10%);opacity:0.6}
-@keyframes float{0%{transform:translateY(-6%)}50%{transform:translateY(6%)}100%{transform:translateY(-6%)}}
+.hero-bg-animated{position:absolute;inset:0;background:linear-gradient(120deg,#fff 0%, #fff 100%);opacity:0.02;z-index:0;pointer-events:none}
+/* animated subtle background gradient shift */
+@keyframes bgShift{0%{filter:hue-rotate(0deg)}50%{filter:hue-rotate(30deg)}100%{filter:hue-rotate(0deg)}}
+.hero-bg-animated{animation:bgShift 18s linear infinite}
 
 /* hero inner card (por defecto caja clara para máxima legibilidad) */
-.hero-inner{
-  max-width:980px;text-align:center;position:relative;z-index:2;padding:36px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.98),rgba(255,255,255,0.95));box-shadow:var(--card-shadow);
-}
-
-/* hero--image (opcional): si activas esta clase en el HTML, el CSS invierte colores */
-.hero--image{background:url("/forodigital2027/assets/images/hero-bg.jpg") center/cover no-repeat}
-.hero--image .hero-inner{background:transparent;color:var(--blanco);box-shadow:none}
-.hero--image .hero-pretitle{color:rgba(255,255,255,0.9)}
+.hero-inner{max-width:980px;text-align:center;position:relative;z-index:2;padding:36px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.98),rgba(255,255,255,0.95));box-shadow:var(--card-shadow)}
 
 /* logo grande en hero */
 .hero-logo-wrap{display:flex;justify-content:center;margin-bottom:8px}
-.hero-logo{height:84px;width:auto;display:block}
+.hero-logo{height:110px;width:auto;display:block}
 
 /* tipografía hero */
-.hero-pretitle{text-transform:uppercase;letter-spacing:0.18em;font-weight:700;color:var(--rosa);font-size:0.9rem}
-.hero-title{font-size:3.8rem;line-height:1.02;font-weight:900;color:var(--negro);margin:8px 0}
-.title-gradient{background:linear-gradient(90deg,var(--rosa),var(--azul));-webkit-background-clip:text;-webkit-text-fill-color:transparent;display:inline-block;animation:gradientShift 6s linear infinite}
+.hero-pretitle{text-transform:uppercase;letter-spacing:0.18em;font-weight:700;color:var(--rosa);font-size:0.95rem}
+.hero-title{font-size:4rem;line-height:1.02;font-weight:900;color:var(--negro);margin:8px 0}
+.title-gradient{background:linear-gradient(90deg,var(--rosa),var(--azul));-webkit-background-clip:text;-webkit-text-fill-color:transparent;display:inline-block;background-size:200% 200%;animation:gradientShift 6s linear infinite}
 @keyframes gradientShift{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
 .hero-sub{margin-top:14px;font-size:1.05rem;color:rgba(0,0,0,0.8)}
 
-/* cuando hero tiene imagen, el título usa degradado y sombra */
-.hero--image .hero-title{color:transparent;background:linear-gradient(90deg,var(--rosa),var(--azul));-webkit-background-clip:text;-webkit-text-fill-color:transparent;text-shadow:0 10px 30px rgba(0,0,0,0.45)}
-
 /* meta y CTAs */
 .hero-meta{display:flex;gap:12px;justify-content:center;margin-top:18px;flex-wrap:wrap}
-.hero-meta li{list-style:none;background:rgba(13,13,13,0.06);padding:6px 12px;border-radius:999px;font-weight:700;color:var(--negro)}
-.hero--image .hero-meta li{background:rgba(255,255,255,0.08);color:var(--white)}
-
+.hero-meta li{list-style:none;background:rgba(13,13,13,0.04);padding:6px 12px;border-radius:999px;font-weight:700;color:var(--negro)}
 .hero-ctas{margin-top:22px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
 .btn{display:inline-block;text-decoration:none;border-radius:999px;padding:12px 20px;font-weight:800;transition:transform .22s ease,box-shadow .22s ease}
 .btn-primary{background:linear-gradient(90deg,var(--rosa),var(--azul));color:var(--negro);box-shadow:0 12px 30px rgba(78,168,255,0.12)}
 .btn-primary:hover{transform:translateY(-4px)}
 .btn-outline{background:transparent;border:1px solid rgba(13,13,13,0.06);color:var(--negro)}
 .btn.large{padding:16px 28px;font-size:1.05rem}
-
-/* nota */
 .hero-note{margin-top:14px;font-size:0.95rem;color:rgba(0,0,0,0.65)}
 
 /* ===========================
@@ -139,9 +121,14 @@ body{
 .keynote-img{width:180px;border-radius:12px;object-fit:cover}
 .keynote-body h3{margin-bottom:8px}
 
-/* GALERÍA */
-.gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.gallery-item img{width:100%;height:220px;object-fit:cover;border-radius:10px;display:block}
+/* CAROUSEL */
+.carousel{position:relative;overflow:hidden;border-radius:12px}
+.carousel-track{display:flex;transition:transform .5s ease}
+.carousel-slide{flex:0 0 100%;display:flex;align-items:center;justify-content:center}
+.carousel-slide img{width:100%;height:420px;object-fit:cover;border-radius:12px;display:block}
+.carousel-btn{position:absolute;top:50%;transform:translateY(-50%);background:rgba(0,0,0,0.5);color:#fff;border:0;padding:10px 14px;border-radius:8px;cursor:pointer;z-index:3}
+.carousel-btn.prev{left:12px}
+.carousel-btn.next{right:12px}
 
 /* FOOTER */
 .site-footer{background:#0d0d0d;color:var(--blanco);padding:40px 20px;margin-top:40px}
@@ -168,16 +155,17 @@ body{
   .footer-grid{grid-template-columns:1fr 1fr}
 }
 @media (max-width:760px){
-  .nav-menu{display:none;position:fixed;top:72px;right:16px;background:var(--blanco);padding:18px;border-radius:12px;flex-direction:column;gap:12px;min-width:200px;box-shadow:0 18px 40px rgba(0,0,0,0.08)}
+  .nav-menu{display:none;position:fixed;top:64px;right:12px;background:#0b0b0b;padding:18px;border-radius:12px;flex-direction:column;gap:12px;min-width:200px;box-shadow:0 18px 40px rgba(0,0,0,0.4)}
   .nav-menu.open{display:flex}
   .nav-toggle{display:block}
   .hero-inner{padding:20px}
   .hero-title{font-size:2.2rem}
+  .hero-logo{height:84px}
   .grid-3{grid-template-columns:1fr}
   .grid-4{grid-template-columns:1fr 1fr}
   .stats-grid{grid-template-columns:repeat(2,1fr)}
   .gallery-grid{grid-template-columns:repeat(2,1fr)}
-  .gallery-item img{height:160px}
+  .carousel-slide img{height:220px}
   .footer-grid{grid-template-columns:1fr}
 }
 
